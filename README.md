@@ -6,13 +6,13 @@ This project allows you to practice the concepts and techniques learned in this 
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
 
-### Commits
+### Commitss
 
 Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
 
 ### Description
 
-In this project, you build an app that diplays a scoreboard for an american football game. There will be two buttons for each team - one will increment that team's score by three point (for a "field goal") and the other will increment that team's score by seven points (for a "touchdown" and "extra point"). The css is already done for you. You should focus your efforts on the functionality of the app.
+In this project, you build an app that diplays a scoreboard for an american football game. There will be two buttons for each team - one will increment that team's score by three points (for a "field goal") and the other will increment that team's score by seven points (for a "touchdown" and "extra point"). The css is already done for you. You should focus your efforts on the functionality of the app.
 
 ## Project Set Up
 
@@ -60,7 +60,7 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 - Add the `onClick` handler to each function
 - Determine how much you will need to increment the score for each button
-  - A touchdown is worth 7 points (assuming the following extra point is made)
+  - A touchdown is worth 7 points (assume the following extra point is made)
   - A field goal is worth 3 points
 - Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
@@ -70,6 +70,6 @@ After finishing your required elements, you can push your work further. These go
 
 - Break out parts of this component into smaller components and compose multiple components together to make the UI
 - Write a "handler" function in the component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
-- Play around with the styling and make this project your own! Maybe make it a soccer (non-american football)) scoreboard, or a rugby or baseball scoreboard
+- Play around with the styling and make this project your own! Maybe make it a soccer (non-american football) scoreboard, or a rugby or baseball scoreboard
 - Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)
