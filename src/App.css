@@ -4,9 +4,9 @@
 }
 
 .scoreboard {
-  width: 58%;
+  width: 80%;
   margin: 10rem auto;
-  background-color: #0b5402;
+  background-color: blue;
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
@@ -43,10 +43,10 @@
 
 .home__name,
 .away__name,
-.down__title,
+.foul__title,
 .toGo__title,
 .ballOn__title,
-.quarter__title {
+.period__title {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
@@ -80,20 +80,20 @@
   height: 20rem;
 }
 
-.down,
+.foul,
 .toGo,
 .ballOn,
-.quarter {
+.period {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   place-items: center;
 }
 
-.down__value,
+.foul__value,
 .toGo__value,
 .ballOn__value,
-.quarter__value {
+.period__value {
   font-family: "Ozone";
   font-size: 5rem;
   color: var(--red);
@@ -113,10 +113,10 @@
   justify-content: space-around;
 }
 
-.homeButtons__touchdown,
-.homeButtons__fieldGoal,
-.awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.homeButtons__touchfoul,
+.homeButtons__freeThrow,
+.awayButtons__touchfoul,
+.awayButtons__freeThrow {
   margin: 1rem;
   border-radius: 4px;
 }

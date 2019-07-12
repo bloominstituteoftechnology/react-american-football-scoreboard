@@ -1,27 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import "../App.css";
 
-const BottomRow = () => {
-  return (
-    <div className="bottomRow">
-      <div className="down">
-        <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
-      </div>
-      <div className="toGo">
-        <h3 className="toGo__title">To Go</h3>
-        <div className="toGo__value">7</div>
-      </div>
-      <div className="ballOn">
-        <h3 className="ballOn__title">Ball on</h3>
-        <div className="ballOn__value">21</div>
-      </div>
-      <div className="quarter">
-        <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">4</div>
-      </div>
-    </div>
-  );
-};
+export default class componentName extends Component {
+  render() {
+    return (
+      <div className="bottomRow">
+        <div className="foul">
+          <h3 className="foul__title">Foul</h3>
+          <div className="foul__value">{this.props.homeFoul}</div>
+        </div>
 
-export default BottomRow;
+        <div className="period">
+          <h3 className="period__title">Period</h3>
+          <div className="period__value">4</div>
+        </div>
+
+        <div className="foul">
+          <h3 className="foul__title">Foul</h3>
+          <div className="foul__value">{this.props.awayFoul}</div>
+        </div>
+      </div>
+    );
+  }
+}
