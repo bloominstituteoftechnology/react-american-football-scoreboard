@@ -2,8 +2,8 @@
 import {useState} from "react";
 import React from "react";
 import "./App.css";
-import TopRow from "./TopRow";
 import BottomRow from "./BottomRow";
+import TopRow from "./TopRow";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -12,13 +12,12 @@ function App() {
   const [scoreTigers, setValueTigers] = useState(0);
 
   return (
-    
     <div className="container">
       <section className="scoreboard">
+        {/* <TopRow /> */}
+        hello
 
-      <TopRow scoreTigers={scoreTigers} scoreLions={scoreLions} />
-
-        <BottomRow />
+        {/* <BottomRow /> */}
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -36,3 +35,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
