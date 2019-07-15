@@ -7,8 +7,8 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
 
-  const [lions, lionsScore] = useState();
-  const [tigers, tigersScore] = useState();
+  const [lions, lionsScore] = useState(0);
+  const [tigers, tigersScore] = useState(1);
   
   
   return (
@@ -37,8 +37,8 @@ function App() {
           <button onClick = {()=> lionsScore(lions + 3)} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button onClick = {()=> tigersScore(lions + 7)} className="awayButtons__touchdown">Away Touchdown</button>
-          <button onClick = {()=> tigerssScore (lions +3)}className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button onClick = {()=> tigersScore(tigers + 7)} className="awayButtons__touchdown">Away Touchdown</button>
+          <button onClick = {()=> tigersScore (tigers +3)}className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
       </section>
     </div>
