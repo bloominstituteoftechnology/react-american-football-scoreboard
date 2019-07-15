@@ -1,12 +1,15 @@
 :root {
   --black: #0d0d0d;
-  --red: #ff2d2b;
+  --red: darkgoldenrod;
 }
 
 .scoreboard {
   width: 58%;
   margin: 10rem auto;
-  background-color: #0b5402;
+  background-image: url('Hogwarts crest grayfelt wp by kybrdgal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
@@ -34,11 +37,11 @@
 }
 
 .home {
-  background-color: #656565;
+  background-color: #693831;
 }
 
 .away {
-  background-color: #af750a;
+  background-color: #2D4A1E;
 }
 
 .home__name,
