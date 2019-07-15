@@ -20,13 +20,14 @@ function App() {
 
             <div className="home__score">{home__score}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">00:05</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{away__score}</div>
           </div>
         </div>
         <BottomRow />
+        git status
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -34,14 +35,14 @@ function App() {
 
           <button
             className="homeButtons__touchdown"
-            onClick={() => setHome_score(7)}
+            onClick={() => setHome_score(home__score + 7)}
           >
             > Home Touchdown
           </button>
 
           <button
             className="homeButtons__fieldGoal"
-            onClick={() => setHome_score(3)}
+            onClick={() => setHome_score(home__score + 3)}
           >
             Home Field Goal
           </button>
@@ -49,14 +50,14 @@ function App() {
         <div className="awayButtons">
           <button
             className="awayButtons__touchdown"
-            onClick={() => setAway_score(7)}
+            onClick={() => setAway_score(away__score + 7)}
           >
             Away Touchdown
           </button>
           <button
             className="awayButtons__fieldGoal"
             o
-            onClick={() => setAway_score(3)}
+            onClick={() => setAway_score(away__score + 3)}
           >
             Away Field Goal
           </button>
