@@ -55,8 +55,18 @@ function App() {
           </button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button
+            className="awayButtons__touchdown"
+            onClick={event => setAwayScore(awayScore + 7)}
+          >
+            Away Touchdown
+          </button>
+          <button
+            className="awayButtons__fieldGoal"
+            onClick={event => setAwayScore(awayScore + 3)}
+          >
+            Away Field Goal
+          </button>
         </div>
       </section>
     </div>
