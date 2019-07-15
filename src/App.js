@@ -12,7 +12,7 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <h2 className="home__name">Gryffindor</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
@@ -20,7 +20,7 @@ function App() {
           </div>
           <div className="timer">00:03</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
+            <h2 className="away__name">Slytherin</h2>
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
@@ -29,12 +29,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 7)}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}>Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 10)}>Gryffindor Scores!</button>
+          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 150)}>Gryffindor Catches the Snitch!</button>
         </div>
         <div className="awayButtons">
-        <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 7)}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
+        <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 10)}>Slytherin Scores!</button>
+          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 150)}>Slytherin Catches the Snitch!</button>
         </div>
       </section>
     </div>

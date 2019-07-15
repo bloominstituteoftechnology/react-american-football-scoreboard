@@ -55,6 +55,10 @@
   padding: 2rem;
 }
 
+.home__name,
+.away__name {
+  font-size: 2rem;
+}
 .home__score,
 .away__score {
   font-family: "Ozone";
@@ -91,8 +95,14 @@
   flex-direction: column;
   justify-content: space-around;
   place-items: center;
+  
 }
-
+.down__title,
+.toGo__title,
+.ballOn__title,
+.quarter__title{
+  font-size: 1.8rem;
+}
 .down__value,
 .toGo__value,
 .ballOn__value,
@@ -107,8 +117,15 @@
   border-radius: 4px;
   padding: 1.6rem;
   border: 1px solid white;
+
+}
+.gryffindor{
+  color: #693831;
 }
 
+.slytherin{
+  color: #2D4A1E
+}
 .buttons {
   width: 50%;
   margin: 0 auto;
