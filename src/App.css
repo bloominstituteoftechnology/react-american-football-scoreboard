@@ -46,10 +46,10 @@
 
 .home__name,
 .away__name,
-.down__title,
-.toGo__title,
-.ballOn__title,
-.quarter__title {
+.homePenalty__title,
+.homeReplacement__title,
+.awayPenalty__title,
+.awayReplacement__title {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
@@ -87,26 +87,26 @@
   height: 20rem;
 }
 
-.down,
-.toGo,
-.ballOn,
-.quarter {
+.homePenalty,
+.homeReplacement,
+.awayPenalty,
+.awayReplacement {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   place-items: center;
   
 }
-.down__title,
-.toGo__title,
-.ballOn__title,
-.quarter__title{
+.homePenalty__title,
+.homeReplacement__title,
+.awayPenalty__title,
+.awayReplacement__title{
   font-size: 1.8rem;
 }
-.down__value,
-.toGo__value,
-.ballOn__value,
-.quarter__value {
+.homePenalty__value,
+.homeReplacement__value,
+.awayPenalty__value,
+.awayReplacement__value {
   font-family: "Ozone";
   font-size: 5rem;
   color: var(--red);
