@@ -42,19 +42,19 @@ Follow these steps for completing your project.
 ### STEP 1 & 2 - Adding Team Scores to the Component's State
 
 - [x] Import the `useState` hook
-- [ ] Set up the state values for the Lions team score using the state hook
+- [x] Set up the state values for the Lions team score using the state hook
 
 ```js
 const [value, setValue] = useState(); // Give these better names, and decide whether you want to pass an initial score into the state hook as the initialValue
 ```
 
-- [ ] Set up the state value for the Tigers team score using a second state hook call
+- [x] Set up the state value for the Tigers team score using a second state hook call
 
 ### STEP 3 - Render the Scores to the DOM
 
-- [ ] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
-- [ ] Render the state values from what we just set up in steps 1 and 2
-- [ ] Play around with different initial values to test if they are rendering on the DOM correctly
+- [x] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
+- [x] Render the state values from what we just set up in steps 1 and 2
+- [x] Play around with different initial values to test if they are rendering on the DOM correctly
 
 ### STEP 4 - Add Click Functionality to Increment the Scores
 
