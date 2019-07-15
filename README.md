@@ -58,11 +58,11 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 ### STEP 4 - Add Click Functionality to Increment the Scores
 
-- [ ] Add the `onClick` handler to each function
-- [ ] Determine how much you will need to increment the score for each button
+- [x] Add the `onClick` handler to each function
+- [x] Determine how much you will need to increment the score for each button
   - A touchdown is worth 7 points (assume the following extra point is made)
   - A field goal is worth 3 points
-- [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
+- [x] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
 ## Stretch Problems
 
