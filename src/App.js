@@ -1,8 +1,8 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from "react"; //import useState
+import React, { useState, useEffect } from "react"; //import useState
 import "./App.css";
 import BottomRow from "./BottomRow";
-import HomeTouchBtn from "./components/homeTouchBtn.js";
+import HomeTouchBtn from "./components/homeTouchBtn";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -15,7 +15,9 @@ function App() {
   const [awayScore, setAwayScore] = useState(0);
 
   //timer
-  const [timer, setTimer] = useState("30:00");
+  function Timer() {
+    const [time, setTimer] = useState("30:00");
+  }
 
   return (
     <div className="container">
@@ -28,7 +30,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">{timer}</div>
+          <div className="timer">{time}</div>
           <div className="away">
             <h2 className="away__name">{awayTeam}</h2>
             <div className="away__score">{awayScore}</div>
@@ -41,7 +43,14 @@ function App() {
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
           {/* - A touchdown is worth 7 points (assume the following extra point is made) - A field goal is worth 3 points */}
 
-          <homeTouchBtn homeScore={0} />
+          {/* <HomeTouchBtn homeScore={}/> */}
+
+          <button
+            className="homeButtons__touchdown"
+            onClick={event => setHomeScore(homeScore + 7)}
+          >
+            Home Touchdown
+          </button>
 
           <button
             className="homeButtons__fieldGoal"
