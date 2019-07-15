@@ -1,11 +1,26 @@
 //TODO: STEP 1 - Import the useState hook.
 import React, { useState } from "react";
+import { useTimer } from "react-timer-hook";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
-function App() {
+function App(expiryTimestamp) {
   const [home, setHome] = useState(0);
   const [away, setAway] = useState(0);
+
+  const {
+    seconds,
+    minutes,
+    hours,
+    days,
+    start,
+    pause,
+    resume,
+    restart
+  } = useTimer({
+    expiryTimestamp,
+    onExpire: () => console.warn("onExpire called")
+  });
 
   // const [away, setCount] = useState(0);
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -21,7 +36,34 @@ function App() {
 
             <div className="home__score">{home}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div>
+            <div className="timer">
+              <span>{minutes}</span>:<span>{seconds}</span>
+            </div>
+            <div>
+              <button className="timerButton" onClick={start}>
+                Start
+              </button>
+              <button className="timerButton" onClick={pause}>
+                Pause
+              </button>
+              <button className="timerButton" onClick={resume}>
+                Resume
+              </button>
+              <button
+                className="timerButton"
+                onClick={() => {
+                  // Restarts to 5 minutes timer
+                  var t = new Date();
+                  t.setSeconds(t.getSeconds() + 900);
+                  restart(t);
+                }}
+              >
+                restart
+              </button>
+            </div>
+          </div>
+
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{away}</div>
@@ -44,6 +86,9 @@ function App() {
           >
             Home Field Goal
           </button>
+          <button onClick={() => setHome(0)} className="awayButtons__fieldGoal">
+            Clear Home Score
+          </button>
         </div>
         <div className="awayButtons">
           <button
@@ -57,6 +102,9 @@ function App() {
             className="awayButtons__fieldGoal"
           >
             Away Field Goal
+          </button>
+          <button onClick={() => setAway(0)} className="awayButtons__fieldGoal">
+            Clear Away Score
           </button>
         </div>
       </section>

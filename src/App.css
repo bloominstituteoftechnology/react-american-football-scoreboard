@@ -52,6 +52,13 @@
   padding: 2rem;
 }
 
+.toGo__title,
+.ballOn__title {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  padding: 1.5rem;
+}
+
 .home__score,
 .away__score {
   font-family: "Ozone";
@@ -119,4 +126,16 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+}
+.input {
+  width: 50px;
+  margin: 10px;
+}
+.clearScore {
+  margin: auto;
+  padding: auto;
+}
+.timerButton {
+  margin: 5px;
+  padding: 5px;
 }
