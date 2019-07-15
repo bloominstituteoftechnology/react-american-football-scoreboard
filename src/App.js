@@ -8,7 +8,7 @@ function App() {
 
 
   const [lions, lionsScore] = useState(0);
-  const [tigers, tigersScore] = useState(1);
+  const [tigers, tigersScore] = useState(0);
   
   
   return (
