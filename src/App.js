@@ -10,7 +10,8 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  
   //You'll need one for the home score and another for the away score.
 
-  const [hValue, aValue] = useState(false);
+  const [home, setHome] = useState(false);
+  const [away, setAway] = useState(false);
 
   return (
    <div className = 'App'>
@@ -22,12 +23,12 @@ function App() {
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
-            <div className="home__score">{hValue}</div>
+            <div className="home__score">{home}</div>
           </div>
-          <div className="timer">{hValue}</div>
+          <div className="timer">{home}</div>
           <div className="away">
-            <h2 className="away__name">{aValue}</h2>
-            <div className="away__score">{avalue}</div>
+            <h2 className="away__name">{away}</h2>
+            <div className="away__score">{away}</div>
           </div>
         </div>
         <BottomRow />
