@@ -7,6 +7,9 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
+  const [valueLions, setValueLions] = useState(0);
+  const [valueTigers, setValueTigers] = useState(0);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -16,7 +19,7 @@ function App() {
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
-            <div className="home__score">32</div>
+            <div className="home__score">30</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
