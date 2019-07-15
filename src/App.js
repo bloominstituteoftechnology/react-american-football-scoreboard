@@ -23,7 +23,7 @@ function App() {
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">32</div>
+            <div className="away__score">{awayScore}</div>
           </div>
         </div>
         <BottomRow />
@@ -37,7 +37,12 @@ function App() {
           >
             Home Touchdown
           </button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button
+            onClick={() => setHomeScore(homeScore + 3)}
+            className="homeButtons__fieldGoal"
+          >
+            Home Field Goal
+          </button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown">Away Touchdown</button>
