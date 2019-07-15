@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
 function Timer () {
@@ -17,12 +17,14 @@ function Timer () {
 
   const startGame = () => {
     alert('Starting game');
-    setInterval(function () {
-      setSeconds(secondsElapsed +1)
+
+    useInterval(() => {
+      setSeconds(secondsElapsed +1 );
       console.log(secondsElapsed);
-      return secondsElapsed;
+
 
     }, 1000)
+      return secondsElapsed;
   };
 
 
