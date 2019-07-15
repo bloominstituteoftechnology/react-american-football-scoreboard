@@ -7,8 +7,7 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [ homeScore, setHomeScore ] = useState(32);
   const [ awayScore, setAwayScore ] = useState(32);
-  console.log('homescore', homeScore);
-  console.log('sethomescore', setHomeScore);
+
 
   return (
     <div className="container">
