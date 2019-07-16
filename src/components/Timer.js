@@ -13,9 +13,9 @@ const Timer = (useState, toggleTimer) => {
       }, 1000);
     }, []);
     if (useState.timer === 0) {
-      // useState.setMyTimer(1500);
+      useState.setMyTimer(1500);
       // toggleTimer();
-      stopTimer();
+      // stopTimer();
     }
 
     function stopTimer(){
