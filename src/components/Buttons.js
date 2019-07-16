@@ -1,4 +1,5 @@
 import React from "react";
+// import Timer from '../components/Timer';
 
 const Buttons = (useState) => {
 
@@ -14,6 +15,11 @@ return (
         </div>
         <div className="quarterButtons">
             <button onClick={() => useState.setQuarter(useState.quarter + 1)}  className="awayButtons__quarter">Quarter</button>
+        </div>
+        <div className="timerButtons">
+            {/* <button onClick={() => useState.setTimer(useState.timer)}>Timer</button> */}
+            <button onClick={() => useState.setTimer(!useState.pause)} className="App">
+             {useState.pause === false ? useState.play : useState.pause}>Timer</button>
         </div>
     </section>
     )
