@@ -13,7 +13,7 @@ const Timer = (useState, toggleTimer) => {
       }, 1000);
     }, []);
     if (useState.timer <= 0) {
-      useState.setTimer(1500);
+      toggleTimer();
     
 
     function stopTimer(){
