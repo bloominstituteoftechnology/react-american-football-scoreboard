@@ -23,14 +23,22 @@ return (
         </div>
         <div className="awayButtons__timerButtons">
             {/* <button onClick={() => useState.setTimer(useState.timer)}>Timer</button> */}
-            <button onClick={() => useState.setTimer(!useState.pause)} className="App">
+            <button onClick={() => useState.setMyTimer(!useState.pause)} className="App">
              {useState.pause === false ? useState.play : useState.pause}Timer</button>
         </div>
         <div className="awayButtons__toGo">
             
             <button onClick={() =>   useState.setToGo(useState.toGo + 1)}  
             className="awayButtons__toGo">
-            {useState.toGo === 5 ? useState.setToGo(useState.toGo === 0) : useState.toGo === 0 }To Go</button>
+            {useState.toGo === 11 ? useState.setToGo(useState.toGo === 0) : useState.toGo === 0 }To Go</button>
+            
+        </div>
+        <div className="awayButtons__down">
+            {/* <button onClick={() =>  useState.setQuarter(useState.quarter + 1)}  className="awayButtons__quarter">Quarter</button> */}
+
+            <button onClick={() =>   useState.setDown(useState.down + 1)}  
+            className="awayButtons__down">
+            {useState.down === 5 ? useState.setDown(useState.down === 0) : useState.down === 0 }down</button>
             
         </div>
     </section>

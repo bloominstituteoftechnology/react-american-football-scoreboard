@@ -11,18 +11,19 @@ function App() {
   const [homeScore, setHome] = useState(0);
   const [awayScore, setAway] = useState(0);
   const [quarter, setQuarter] = useState(0);
-  const [timer, setTimer] = useState(1500);
-  const [pause, play] = useState(true);
+  const [timer, setMyTimer] = useState(1500);
+  const [pause, play] = useState(false);
   const [toGo, setToGo] = useState(0);
+  const [down, setDown] = useState(0);
 
   return (
     <div className="container">
       <section className="scoreboard">
-        <ScoreBoard homeScore={homeScore} awayScore={awayScore} timer={timer} setTimer={setTimer}  />
-        <BottomRow quarter={quarter} setQuarter={setQuarter} timer={timer} setTimer={setTimer} toGo={toGo} setToGo={setToGo} />
+        <ScoreBoard homeScore={homeScore} awayScore={awayScore} timer={timer} setMyTimer={setMyTimer}  />
+        <BottomRow down={down} setDown={setDown} quarter={quarter} setQuarter={setQuarter} timer={timer} setMyTimer={setMyTimer} toGo={toGo} setToGo={setToGo} />
       </section>
-        <Buttons quarter={quarter} homeScore={homeScore} awayScore={awayScore} setHome={setHome} setAway={setAway} setQuarter={setQuarter} timer={timer} setTimer={setTimer} toGo={toGo} setToGo={setToGo}/>
-        <Timer timer={timer} setTimer={setTimer} pause={pause} play={play}/>
+        <Buttons down={down} setDown={setDown} quarter={quarter} homeScore={homeScore} awayScore={awayScore} setHome={setHome} setAway={setAway} setQuarter={setQuarter} timer={timer} setMyTimer={setMyTimer} toGo={toGo} setToGo={setToGo}/>
+        <Timer timer={timer} setMyTimer={setMyTimer} pause={pause} play={play}/>
     </div>
   );
 }

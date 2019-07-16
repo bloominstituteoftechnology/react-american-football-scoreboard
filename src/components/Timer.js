@@ -9,19 +9,21 @@ const Timer = (useState, toggleTimer) => {
 
     useEffect(() => {
       id = setInterval(() => {
-        useState.setTimer(timer => timer - 1);
+        useState.setMyTimer(timer => timer - 1);
       }, 1000);
     }, []);
-    if (useState.timer <= 0) {
-      toggleTimer();
-    
+    if (useState.timer === 0) {
+      // useState.setMyTimer(1500);
+      // toggleTimer();
+      stopTimer();
+    }
 
     function stopTimer(){
       clearInterval(id);
     }
     
-    function toggleTimer(){
-      console.log(useState.pause);
+    function toggleTimer(useState){
+     // console.log(useState.pause);
       if(useState.pause){
         useState.pause = false;
         Timer();
@@ -30,7 +32,7 @@ const Timer = (useState, toggleTimer) => {
         stopTimer();
       }
     }
-  }
+  
 
     return (
       <div>
