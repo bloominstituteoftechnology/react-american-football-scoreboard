@@ -18,7 +18,7 @@ return (
 
             <button onClick={() =>   useState.setQuarter(useState.quarter + 1)}  
             className="awayButtons__quarter">
-            {useState.quarter === 5 ? useState.setQuarter(useState.quarter === 0) : useState.quarter + 2 }Quarter</button>
+            {useState.quarter === 5 ? useState.setQuarter(useState.quarter === 0) : useState.quarter === 0 }Quarter</button>
             
             
 
