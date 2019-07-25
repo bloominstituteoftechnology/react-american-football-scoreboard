@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-export default function Home(props) {
+export default function HomeFieldGoal() {
 
   return (
         <div className="homeButtons">
-          <button className="homeButtons__fieldGoal" onClick={props.setHome}>Home Field Goal</button>
+          <button className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
   );
 }
