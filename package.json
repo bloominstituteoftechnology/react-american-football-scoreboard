@@ -27,5 +27,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Nathan-Culver/react-american-football-scoreboard.git",
+  "author": "Nathan <s6nculve@gmail.com>",
+  "license": "MIT"
 }
