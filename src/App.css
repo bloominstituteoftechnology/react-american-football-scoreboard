@@ -120,3 +120,11 @@
   margin: 1rem;
   border-radius: 4px;
 }
+
+
+
+.quarterButtons_increase,
+.quarterButtons_decrease {
+  margin: 1rem;
+  border-radius: 4px;
+}
