@@ -11,7 +11,7 @@ function App() {
 
   let logic = () => {
     console.log("hello");
-    setHomeScore(homeScore + 7);
+    setHomeScore(homeScore +  7);
   };
 
   return (
