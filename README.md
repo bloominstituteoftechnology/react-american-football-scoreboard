@@ -1,4 +1,4 @@
-# Module Project: React Components and Components State - American Football Scoreboard
+# Module Project: React Components and Components State - American Football Scoreboard!
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored React components and component state. During the module, you studied what React is, what React components are and how to build them, what state is and how to make a component stateful, and how to change a components state with a click handler. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
