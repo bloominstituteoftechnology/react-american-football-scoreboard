@@ -1,11 +1,12 @@
 //TODO: STEP 1 - Import the useState hook.
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
+  //TODO: STEP 2 - Establish your application's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
+  const [count, updateCount] = useState();
   return (
     <div className="container">
       <section className="scoreboard">
@@ -28,6 +29,11 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
+
+          <button onClick={() => updateCount(count + 1)}>Increment</button>
+          <button onClick={() => updateCount(count - 1)}>Decrement</button>
+          <button onClick={() => updateCount(32)}>Reset</button>
+
           <button className="homeButtons__touchdown">Home Touchdown</button>
           <button className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
