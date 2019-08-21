@@ -9,6 +9,8 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [homeScore, setScore] = useState(20)
   const [awayValue, setValue] = useState(15)
+  const [homeTeamName, setHomeName] = useState('Tiger')
+  const [awayTeamName, setAwayName] = useState(15)
  
   const homeTouchDown = e => {
     setScore(homeScore + 7);
@@ -30,14 +32,19 @@ function App() {
   const resetHomeScore = e => {
     setScore( homeScore * 0 )
   }
- 
+  const handler = e => {
+    setHomeName(homeTeamName);
+  }
+
   return (
     <div className="container">
       <ScoreBoard 
         homeScore = {homeScore} 
         awayValue = {awayValue} 
         setScore = {setScore} 
-        setValue = {setValue} 
+        setValue = {setValue}
+        setHomeName = {setHomeName}
+        homeTeamName = {homeTeamName}
         />
       <Buttons 
         homeTouchDown= {homeTouchDown} 
