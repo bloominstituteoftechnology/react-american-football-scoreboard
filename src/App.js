@@ -9,8 +9,23 @@ function App() {
   const [homeScore, updateHomeScore] = useState(19);
   const [awayScore, updateAwayScore] = useState(27);
   
-  // const[timer, updateTimer] = useState{15*60*1000} Timer for stretch
+  // const[timer, updateTimer] = useState{15*60*1000} //Timer for stretch
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     updateTimer(timer => timer-1)
+  //   }, 1000)
+  // return () => clearInterval(interval)
+  // }, [])
 
+
+  // const [quarter,updateQuarter] = useState(1)
+  // useEffect(() => {
+  //   if(timer<1) {
+  //     updateTimer(15)
+  //     updateQuarter(quarter+1)
+  //   }
+  // }, [timer, quarter])
+  
   return (
     <div className="container">
       <section className="scoreboard">
