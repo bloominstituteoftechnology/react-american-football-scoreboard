@@ -1,12 +1,15 @@
 import React, {useState} from "react";
 import "./App.css";
-
+import './Timer'
 
 
 const BottomRow = () => {
   const [gameQuarter, setGameQuarter] = useState(0);
   const changeQuarter = e => {
     setGameQuarter(gameQuarter + 1)
+  }
+  if(gameQuarter == 5){
+    setGameQuarter(gameQuarter == gameQuarter+1)
   }
   return (
     <div className="bottomRow">
