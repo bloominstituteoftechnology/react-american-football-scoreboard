@@ -31,7 +31,8 @@ button {
   border: none;
   padding: 1rem 2rem;
   text-decoration: none;
-  background: #414141;
+  background: red;
+  border-radius: 5px;
   color: #ffffff;
   font-family: inherit;
   font-size: 1.6rem;
@@ -40,12 +41,12 @@ button {
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  margin: 2px;
+  margin-top: 10px;
 }
 
 button:hover,
 button:focus {
-  background: #a2272d;
+  background: rgb(255, 73, 73);
 }
 
 button:focus {

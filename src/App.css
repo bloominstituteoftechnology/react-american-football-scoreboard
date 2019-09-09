@@ -5,13 +5,14 @@
 
 .scoreboard {
   width: 58%;
-  margin: 10rem auto;
-  background-color: #0b5402;
+  margin: 5rem auto;
+  background-color: rgb(29, 124, 248);
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
+  border-radius: 10px;
 }
 
 .topRow {
@@ -38,7 +39,7 @@
 }
 
 .away {
-  background-color: #af750a;
+  background-color: orange;
 }
 
 .home__name,
