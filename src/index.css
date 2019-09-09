@@ -30,7 +30,6 @@ button {
   display: inline-block;
   border: none;
   padding: 1rem 2rem;
-  margin: 0;
   text-decoration: none;
   background: #414141;
   color: #ffffff;
@@ -41,6 +40,7 @@ button {
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  margin: 2px;
 }
 
 button:hover,
