@@ -2,20 +2,33 @@
 import React, { useState } from 'react';
 import './App.css';
 import BottomRow from './BottomRow';
+import Timer from 'react-compound-timer';
 
 function App() {
 	//TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 	const [ lionsScore, setLionsScore ] = useState(0);
 	const [ tigersScore, setTigersScore ] = useState(0);
-	const [ secondsTimer, setSecondsTimer ] = useState(0);
-	const [ minutesTimer, setMinutesTimer ] = useState(0);
 
+	// function startGame() {
+	// 	var min = 5,
+	// 		max = 10;
+	// 	var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
+	// 	setTigersScore(tigersScore + 7);
+	// 	setTimeout(startGame(), rand * 1000);
+	// }
+	// startGame();
+	var min = 60,
+		max = 150;
+	var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number
 	setTimeout(() => {
-		setSecondsTimer(secondsTimer - 1);
-		if (secondsTimer === 0) {
-			setSecondsTimer(25);
-		}
-	}, 1000);
+		setTigersScore(tigersScore + 7);
+	}, rand * 1000);
+	var min1 = 30,
+		max1 = 200;
+	var rand = Math.floor(Math.random() * (max1 - min1 + 1) + min1); //Generate Random number
+	setTimeout(() => {
+		setLionsScore(lionsScore + 7);
+	}, rand * 1000);
 
 	return (
 		<div className="container">
@@ -28,7 +41,16 @@ function App() {
 
 						<div className="home__score">{lionsScore}</div>
 					</div>
-					<div className="timer">{secondsTimer}</div>
+					<div className="timer">
+						<Timer initialTime={1499000} direction="backward">
+							{() => (
+								<React.Fragment>
+									<Timer.Minutes />:
+									<Timer.Seconds />
+								</React.Fragment>
+							)}
+						</Timer>
+					</div>
 					<div className="away">
 						<h2 className="away__name">Tigers</h2>
 						<div className="away__score">{tigersScore}</div>
@@ -46,6 +68,7 @@ function App() {
 						Home Field Goal
 					</button>
 				</div>
+				<button>Start Game</button>
 				<div className="awayButtons">
 					<button onClick={() => setTigersScore(tigersScore + 7)} className="awayButtons__touchdown">
 						Away Touchdown
