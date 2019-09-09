@@ -23,9 +23,20 @@ function App() {
 
    }
 
-  //  const awayScore = useState(0);
-  //  const initialAwayScore = awayScore[0];
-  //  const setAwayScore = awayScore[1];
+
+  const [awayScore, setAwayScore] = useState(0);
+
+  const awayFieldScore = () =>{
+
+    setAwayScore(awayScore + 3)
+
+  }
+
+  const awayTouchDown = () =>{
+
+    setAwayScore(awayScore + 7)
+
+  }
 
   return (
     <div className="container">
@@ -41,7 +52,7 @@ function App() {
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">32</div> 
+            <div className="away__score">{awayScore}</div> 
           </div>
         </div>
         <BottomRow />
@@ -53,8 +64,8 @@ function App() {
           <button className="homeButtons__fieldGoal" onClick ={homeFieldScore}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick ={awayTouchDown}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal"  onClick = {awayFieldScore}>Away Field Goal</button>
         </div>
       </section>
     </div>
