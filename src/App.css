@@ -20,7 +20,7 @@
   place-items: center;
   /* height: 20rem; */
 }
-
+z
 .home,
 .away {
   height: 100%;
@@ -116,7 +116,59 @@
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal,
+.increaseQuarter,
+.decreaseQuarter {
   margin: 1rem;
   border-radius: 4px;
+}
+
+
+/* -----------------------Timer CSS ----------------------- */
+.app {
+  text-align: center;
+  background-color: #0b5402;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.time {
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.button {
+  padding: .6rem 1.5rem;
+  margin: .4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8rem;
+  border-style: groove;
+}
+
+.button:focus {
+  outline-width: 0;
+}
+
+.button-primary:hover {
+  background-color: #2641d4;
+  border: 1px solid #1b1f2b;
+}
+
+.button-primary-active {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
+}
+
+.button-primary-inactive {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
 }

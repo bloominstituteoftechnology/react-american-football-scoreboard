@@ -22,6 +22,8 @@ const BottomRow = () => {
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">{currentQuarter}</div>
         <button className="increaseQuarter" onClick = {() => setQuarter(currentQuarter + 1)}> Increase Quarter</button>
+        <button className="decreaseQuarter" onClick = {() => setQuarter(currentQuarter - 1)}> Decrease Quarter</button>
+
       </div>
     </div>
 
