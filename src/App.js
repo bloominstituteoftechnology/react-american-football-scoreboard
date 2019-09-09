@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -37,7 +37,7 @@ function App(props) {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:00</div>
+          <div className="timer">15:00</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
