@@ -6,12 +6,11 @@
 .scoreboard {
   width: 58%;
   margin: 10rem auto;
-  background-color: #0b5402;
-  color: white;
-  border-radius: 0.5rem;
-  margin-top: 10rem;
   padding: 5rem;
+  color: white;
+  background-color: #0b5402;
   border: 4px solid #aaaaaa;
+  border-radius: 0.5rem;
 }
 
 .topRow {
@@ -23,14 +22,14 @@
 
 .home,
 .away {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  place-items: center;
+  width: 15rem;
+  height: 100%;
   border: 3px solid white;
   border-radius: 0.5rem;
-  width: 15rem;
+  place-items: center;
 }
 
 .home {
@@ -47,26 +46,26 @@
 .toGo__title,
 .ballOn__title,
 .quarter__title {
-  text-transform: uppercase;
-  font-size: 3rem;
   padding: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .home__score,
 .away__score {
-  font-family: "Ozone";
-  font-size: 7rem;
   width: 90%;
+  padding: 5%;
+  color: var(--red);
+  font-size: 7rem;
+  font-family: "Ozone", sans-serif;
   text-align: center;
   background-color: var(--black);
-  color: var(--red);
-  padding: 5%;
 }
 
 .timer {
-  font-family: "Ozone";
-  font-size: 9rem;
   padding: 2rem;
+  font-size: 9rem;
+  font-family: "Ozone", sans-serif;
   text-align: center;
   background-color: var(--black);
   border: 2px solid white;
@@ -94,23 +93,23 @@
 .toGo__value,
 .ballOn__value,
 .quarter__value {
-  font-family: "Ozone";
-  font-size: 5rem;
-  color: var(--red);
   width: 7rem;
+  margin-top: 1rem;
+  padding: 1.6rem;
+  color: var(--red);
+  font-size: 5rem;
+  font-family: "Ozone", sans-serif;
   text-align: center;
   background-color: var(--black);
-  margin-top: 1rem;
-  border-radius: 4px;
-  padding: 1.6rem;
   border: 1px solid white;
+  border-radius: 4px;
 }
 
 .buttons {
-  width: 50%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .homeButtons__touchdown,

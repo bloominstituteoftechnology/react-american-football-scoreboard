@@ -1,24 +1,26 @@
 @font-face {
-  font-family: "Ozone";
-  src: url("./Ozone.ttf");
   font-weight: 400;
+  font-family: "Ozone";
   font-style: normal;
+  src: url("./Ozone.ttf");
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
+  font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.6rem;
 }
 
 code {
@@ -28,16 +30,16 @@ code {
 
 button {
   display: inline-block;
-  border: none;
-  padding: 1rem 2rem;
   margin: 0;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
   text-decoration: none;
   background: #414141;
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 1.6rem;
+  border: none;
   cursor: pointer;
-  text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;

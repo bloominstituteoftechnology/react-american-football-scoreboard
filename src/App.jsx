@@ -1,10 +1,11 @@
-//TODO: STEP 1 - Import the useState hook.
-import React from "react";
-import "./App.css";
-import BottomRow from "./BottomRow";
+// TODO: STEP 1 - Import the useState hook.
+import React from 'react';
+import './App.css';
+import BottomRow from './BottomRow';
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
+  // TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one
+  // for the home score and another for the away score.
 
   return (
     <div className="container">
@@ -13,7 +14,8 @@ function App() {
           <div className="home">
             <h2 className="home__name">Lions</h2>
 
-            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic
+            values from our state. */}
 
             <div className="home__score">32</div>
           </div>
@@ -28,12 +30,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button className="homeButtons__touchdown" type="button">Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" type="button">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" type="button">Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" type="button">Away Field Goal</button>
         </div>
       </section>
     </div>
