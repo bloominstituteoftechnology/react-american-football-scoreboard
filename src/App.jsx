@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import TopRow from './TopRow/TopRow';
-import BottomRow from './BottomRow/BottomRow';
+import TopRow from './Components/TopRow/TopRow';
+import BottomRow from './Components/BottomRow/BottomRow';
 
 function App() {
   const [homeScore, setHomeScore] = useState(0);
