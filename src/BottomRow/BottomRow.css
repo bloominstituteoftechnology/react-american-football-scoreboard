@@ -1,0 +1,43 @@
+/* @define BottomRow */
+
+.BottomRow {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  height: 20rem;
+}
+
+.BottomRow-down,
+.BottomRow-toGo,
+.BottomRow-ballOn,
+.BottomRow-quarter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  place-items: center;
+}
+
+.BottomRow-down--title,
+.BottomRow-toGo--title,
+.BottomRow-ballOn--title,
+.BottomRow-quarter--title {
+  padding: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.BottomRow-down--value,
+.BottomRow-toGo--value,
+.BottomRow-ballOn--value,
+.BottomRow-quarter--value {
+  width: 7rem;
+  margin-top: 1rem;
+  padding: 1.6rem;
+  color: var(--red);
+  font-size: 5rem;
+  font-family: "Ozone", sans-serif;
+  text-align: center;
+  background-color: var(--black);
+  border: 1px solid white;
+  border-radius: 4px;
+}
