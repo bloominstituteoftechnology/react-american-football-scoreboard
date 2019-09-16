@@ -1,0 +1,56 @@
+/* @define TopRow */
+
+.TopRow {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  /* height: 20rem; */
+}
+
+.TopRow-home,
+.TopRow-away {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15rem;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 0.5rem;
+  place-items: center;
+}
+
+.TopRow-home {
+  background-color: #656565;
+}
+
+.TopRow-away {
+  background-color: #af750a;
+}
+
+.TopRow-home--name,
+.TopRow-away--name {
+  padding: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.TopRow-home--score,
+.TopRow-away--score {
+  width: 90%;
+  padding: 5%;
+  color: var(--red);
+  font-size: 7rem;
+  font-family: "Ozone", sans-serif;
+  text-align: center;
+  background-color: var(--black);
+}
+
+.TopRow-timer {
+  padding: 2rem;
+  font-size: 9rem;
+  font-family: "Ozone", sans-serif;
+  text-align: center;
+  background-color: var(--black);
+  border: 2px solid white;
+  border-radius: 6px;
+}
