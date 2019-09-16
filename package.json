@@ -6,7 +6,8 @@
     "install-peerdeps": "^1.10.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.1.1"
+    "react-scripts": "^3.1.1",
+    "prop-types": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

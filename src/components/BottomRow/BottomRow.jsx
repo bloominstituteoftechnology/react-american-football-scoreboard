@@ -1,5 +1,7 @@
 import React from 'react';
+
 import './BottomRow.css';
+
 
 const BottomRow = () => (
   <div className="BottomRow">

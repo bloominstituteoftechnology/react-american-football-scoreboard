@@ -1,0 +1,16 @@
+/* @define Buttons */
+
+.Buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Buttons-homeButtons--touchdown,
+.Buttons-homeButtons--fieldGoal,
+.Buttons-awayButtons--touchdown,
+.Buttons-awayButtons--fieldGoal {
+  margin: 1rem;
+  border-radius: 4px;
+}

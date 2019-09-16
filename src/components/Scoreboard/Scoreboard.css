@@ -1,0 +1,11 @@
+/* @define Scoreboard */
+
+.Scoreboard {
+  width: 58%;
+  margin: 10rem auto;
+  padding: 5rem;
+  color: white;
+  background-color: #0b5402;
+  border: 4px solid #aaaaaa;
+  border-radius: 0.5rem;
+}
