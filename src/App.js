@@ -1,11 +1,15 @@
 //TODO: STEP 1 - Import the useState hook.
-import React from "react";
+import React, {useState}  from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-
+  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.
+  //  You'll need one for the home score and another for the away score.
+  const [h_value, setValue_h] = React.useState(0);
+  const [t_value, setValue_t] = React.useState(0);
+  const [hextra_value, setValue_he] = React.useState(0);
+  const [textra_value, setValue_te] = React.useState(0);
   return (
     <div className="container">
       <section className="scoreboard">
@@ -13,14 +17,15 @@ function App() {
           <div className="home">
             <h2 className="home__name">Lions</h2>
 
-            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+            {/* TODO STEP 3 - We need to change the hardcoded values in these divs
+            // to accept dynamic values from our state. */}
 
-            <div className="home__score">32</div>
+            <div className="home__score">{h_value+hextra_value}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">32</div>
+            <div className="away__score">{t_value+textra_value}</div>
           </div>
         </div>
         <BottomRow />
@@ -28,12 +33,44 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button className="homeButtons__touchdown"
+              onClick={() => {
+                setValue_h(h_value + 6);
+              }}
+          >Home Touchdown</button>
+
+          <button className="homeButtons__fieldGoal"
+              onClick={() => {
+                setValue_h(h_value + 3);
+              }}
+          >Home Field Goal</button>
+
+          <button className= "homeButtons__extaPoint"
+              onClick={() => {
+                setValue_he(hextra_value + 1);
+              }}
+          >Home Extra Point</button>
         </div>
+
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown"
+              onClick={() => {
+                setValue_t(t_value + 6);
+              }}
+          >Away Touchdown</button>
+          <button className="awayButtons__fieldGoal"
+              onClick={() => {
+                setValue_t(t_value + 3);
+              }}
+
+          >Away Field Goal</button>
+
+            <button className= "tigresButtons__extaPoint"
+              onClick={() => {
+                setValue_te(textra_value + 1);
+              }}
+          >Tigres Extra Point</button>
+
         </div>
       </section>
     </div>
