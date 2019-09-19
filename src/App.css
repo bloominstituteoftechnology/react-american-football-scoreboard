@@ -111,12 +111,22 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+}
+.scoreBoardPoints,
+.scoreBoardControls {
+  display: flex;
 }
 
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal,
+.down,
+.yardsLeft,
+.ballOn,
+.quarter,
+.reset {
   margin: 1rem;
   border-radius: 4px;
 }
