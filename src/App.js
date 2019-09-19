@@ -8,8 +8,7 @@ function App() {
   //  You'll need one for the home score and another for the away score.
   const [h_value, setValue_h] = React.useState(0);
   const [t_value, setValue_t] = React.useState(0);
-  const [hextra_value, setValue_he] = React.useState(0);
-  const [textra_value, setValue_te] = React.useState(0);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -20,12 +19,12 @@ function App() {
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs
             // to accept dynamic values from our state. */}
 
-            <div className="home__score">{h_value+hextra_value}</div>
+            <div className="home__score">{h_value}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">{t_value+textra_value}</div>
+            <div className="away__score">{t_value}</div>
           </div>
         </div>
         <BottomRow />
@@ -47,7 +46,7 @@ function App() {
 
           <button className= "homeButtons__extaPoint"
               onClick={() => {
-                setValue_he(hextra_value + 1);
+                setValue_h(h_value + 1);
               }}
           >Home Extra Point</button>
         </div>
@@ -65,11 +64,11 @@ function App() {
 
           >Away Field Goal</button>
 
-            <button className= "tigresButtons__extaPoint"
-              onClick={() => {
-                setValue_te(textra_value + 1);
-              }}
-          >Tigres Extra Point</button>
+            <button className= "awayButtons__extaPoint"
+             onClick={() => {
+              setValue_t(t_value + 1);
+            }}
+          >Away Extra Point</button>
 
         </div>
       </section>
