@@ -31,38 +31,38 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown"
+          <button className="homeButton"
               onClick={() => {
                 setValue_h(homeValue + 6);
               }}
           >Home Touchdown</button>
 
-          <button className="homeButtons__fieldGoal"
+          <button className="homeButton"
               onClick={() => {
                 setValue_h(homeValue + 3);
               }}
           >Home Field Goal</button>
 
-          <button className= "homeButtons__extaPoint"
+          <button className= "homeButton"
               onClick={() => {
                 setValue_he(homeExtra + 1);
               }}
           >Home Extra Point</button>
         </div>
         <div className="awayButtons">
-        <button className="awayButtons__touchdown"
+        <button className="awayButton"
               onClick={() => {
                 setValue_t(awayValue + 6);
               }}
           >Away Touchdown</button>
-          <button className="awayButtons__fieldGoal"
+          <button className="awayButton"
               onClick={() => {
                 setValue_t(awayValue + 3);
               }}
 
           >Away Field Goal</button>
 
-            <button className= "tigresButtons__extaPoint"
+            <button className= "awayButton"
               onClick={() => {
                 setValue_te(awayExtra + 1);
               }}
