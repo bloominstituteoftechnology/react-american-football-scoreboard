@@ -118,7 +118,8 @@
 .awayButtons__touchdown,
 .awayButtons__fieldGoal,
 .timerButtons__quarter,
-.timerButtons__down {
+.downButtons__down-next,
+.downButtons__down-first {
   margin: 1rem;
   border-radius: 4px;
 }
