@@ -1,9 +1,12 @@
 //TODO: STEP 1 - Import the useState hook.
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
+  const [score, setScore] = useState(0);
+  console.log("this is useState", useState());
+
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
   return (
@@ -11,7 +14,7 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <h2 className="home__name">Gators</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
