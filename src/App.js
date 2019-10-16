@@ -9,7 +9,7 @@ import BottomRow from "./BottomRow";
   const [pointsHome, setPointsHome] = useState(0);
   const [pointsAway, setPointsAway] = useState(0);
 
-  
+  return (
     <div className="container">
       <section className="scoreboard">
         <div className="topRow">
@@ -67,9 +67,10 @@ import BottomRow from "./BottomRow";
           </button>
         
         </div>
-      </section>
-     
+      </section>     
     </div>
-     export default App;
-  }
+     
+  )}
+
+  export default App;
   
