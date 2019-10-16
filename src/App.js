@@ -1,15 +1,15 @@
-y//TODO: STEP 1 - Import the useState hook.
-import React from "react";
+//TODO: STEP 1 - Import the useState hook.// 
 import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
-function App() {
+
+  function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [pointsHome, setPointsHome] = useState(0);
   const [pointsAway, setPointsAway] = useState(0);
 
-  return (
+  
     <div className="container">
       <section className="scoreboard">
         <div className="topRow">
@@ -31,8 +31,7 @@ function App() {
             <div className="away__score">{pointsAway}</div>
           </div>
         </div>
-        <BottomRow />
-      </section>
+        </section>
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
@@ -58,7 +57,7 @@ function App() {
             className="awayButtons__touchdown"
             onClick={() => setPointsAway(pointsAway + 7)}
           >
-            Away Touchdown
+           Away Touchdown
           </button>
           <button
             className="awayButtons__fieldGoal"
@@ -66,7 +65,11 @@ function App() {
           >
             Away Field Goal
           </button>
+        
         </div>
       </section>
-    </div> 
-  ) }
+     
+    </div>
+     export default App;
+  }
+  
