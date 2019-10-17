@@ -56,13 +56,6 @@ function App() {
   // }
   
   
-  if (seconds !== 60) {
-    let seconds = setSeconds(0);
-    return () => clearInterval(seconds);
-  }
-}, [0]);
-}
-  
   
   
   useEffect(() => {
@@ -71,13 +64,13 @@ function App() {
       interval = setInterval(() => {
         setSeconds(seconds => seconds + 1);
       }, 1000);
-    } else if (!isActive && seconds !== 60) {
-      clearInterval(interval);
+    } else if (!isActive && seconds === 60) {
+      clearInterval(timer);
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
-
-
+  
+  
   useEffect(() => {
     let interval = null;
     if (timer) {
@@ -90,6 +83,12 @@ function App() {
     return () => clearInterval(interval);
   }, [isActive, minuets]);
   
+    if (seconds === 60) {
+      let seconds = setSeconds(0);
+      return () => clearInterval(seconds);
+    }
+  
+    
   return (
     <div className="container">
       <section className="scoreboard">
@@ -102,7 +101,7 @@ function App() {
 
             <div className="home__score">{home}</div>
           </div>
-          <div className="timer">{minuets}:{seconds}</div>
+          <div className="timer">{minuets} : {seconds}</div>
           <div className="away">
             <h2 className="away__name">Browns</h2>
             <div className="away__score">{away}</div>
