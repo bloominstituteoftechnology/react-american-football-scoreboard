@@ -56,12 +56,12 @@ function App() {
   // }
   
   
-  //   if (setSeconds){
-  //     () => setSeconds(60);
-  //   }
-  //   setSeconds(0);
-  // }
-  
+  if (seconds !== 60) {
+    let seconds = setSeconds(0);
+    return () => clearInterval(seconds);
+  }
+}, [0]);
+}
   
   
   
