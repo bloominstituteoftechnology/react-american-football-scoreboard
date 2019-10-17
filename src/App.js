@@ -31,7 +31,7 @@ function App() {
   
   
 
->>>>>>> 08ae9df6034a8e2897165a2f22d5ec6545031af7
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -40,13 +40,9 @@ function App() {
             <h2 className="home__name">Lions</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
-<<<<<<< HEAD
-            
-            <div className="home__score">32</div>
-=======
 
             <div className="home__score">{homeScore}</div>
->>>>>>> 08ae9df6034a8e2897165a2f22d5ec6545031af7
+
           </div>
           <div className="timer">00:03</div>
           <div className="away">
