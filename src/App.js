@@ -65,7 +65,7 @@ function App() {
       interval = setInterval(() => {
         setSeconds(seconds => seconds + 1);
       }, 1000);
-    } else if (!isActive && seconds !== 0) {
+    } else if (!isActive && seconds !== 60) {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
