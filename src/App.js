@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -24,6 +24,23 @@ function App() {
     setAwayScore(awayScore + 3);
   };
 
+  const clock = () => {
+    setTimeLeft()
+  }
+
+  const [timeLeft, setTimeLeft] = useState(1500);
+  
+
+  useEffect(() => {
+    if (!timeLeft) return;
+
+    const intervalId = setInterval(() => {
+    setTimeLeft(timeLeft - 1);
+    }, 1000);
+
+   return () => clearInterval(intervalId);
+  }, [timeLeft]);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -35,7 +52,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{timeLeft}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
@@ -59,3 +76,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
