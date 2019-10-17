@@ -1,5 +1,7 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from "react";
+
+// imported useState, useEffect imported to run timer
+import React, { useState, useEffect } from "react";
 // import React from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
@@ -10,6 +12,22 @@ function App() {
 // made the hooks for home and away with the set properties
 const [homeScore, setHomeScore] = useState(0);
 const [awayScore, setAwayScore] = useState(0);
+
+// attempting stretch for counter
+const [ timer, setTimer ] =useState(55);
+// creating hooks for timer, use state set to beginning time for countdown
+useEffect( ()=>{
+    const clock = setTimeout(()=>{
+      if (timer > 0 ) {
+        setTimer(timer-1)
+      }
+      else {
+        clearTimeout(clock)
+      }
+    }, 1000)
+}, [timer]
+)
+// created function for the useEffect. Established variable "clock", with timeout function to countdown.
 
 
 // creating functions using the hook's set properties to increase 
@@ -43,7 +61,7 @@ const awayFieldGoal = () =>{
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">00:{timer}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
