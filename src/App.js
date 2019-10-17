@@ -56,6 +56,12 @@ function App() {
   // }
   
   
+  //   if (setSeconds){
+  //     () => setSeconds(60);
+  //   }
+  //   setSeconds(0);
+  // }
+  
   
   
   
