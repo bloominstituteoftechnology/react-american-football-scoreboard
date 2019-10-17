@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+// import "./App.css";
 
 const BottomRow = () => {
   return (
@@ -25,3 +25,9 @@ const BottomRow = () => {
 };
 
 export default BottomRow;
+
+
+{/* <div>
+<button className="current-quarter" onClick ={() => setQuater (quarter + 1)}>Quarter</button>
+</div> */}
+//const [quarter, setQuater] = useState(1)

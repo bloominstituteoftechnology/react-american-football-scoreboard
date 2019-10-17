@@ -6,7 +6,15 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [homeScore, setHomeScore] = useState(0);
+              //  -----^ Function to change homeScore value
   const [awayScore, setAwayScore] = useState(0);
+  // ------^^^Variable whos value is --------^
+
+  const restartGame = () => {
+    setHomeScore(0);
+    setAwayScore(0)
+  }
+  
 
   return (
     <div className="container">
@@ -19,10 +27,11 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:05</div>
+          <div className="timer">10</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
+
           </div>
         </div>
         <BottomRow />
@@ -37,6 +46,11 @@ function App() {
           <button className="awayButtons__touchdown" onClick ={() => setAwayScore (awayScore + 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick ={() => setAwayScore (awayScore + 3)}>Away Field Goal</button>
         </div>
+        <button className='reset' 
+          onClick= {() => restartGame()}>
+          Restart Game
+        </button>
+
       </section>
     </div>
   );
