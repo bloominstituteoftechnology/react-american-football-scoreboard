@@ -70,6 +70,19 @@ function App() {
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
+
+
+  useEffect(() => {
+    let interval = null;
+    if (timer) {
+      interval = setInterval(() => {
+        setMinuets(mineuts => minuets + 1);
+      }, 60000);
+    } else if (!isActive && minuets !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, minuets]);
   
   return (
     <div className="container">
@@ -83,7 +96,7 @@ function App() {
 
             <div className="home__score">{home}</div>
           </div>
-          <div className="timer">{seconds}</div>
+          <div className="timer">{minuets}:{seconds}</div>
           <div className="away">
             <h2 className="away__name">Browns</h2>
             <div className="away__score">{away}</div>
