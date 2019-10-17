@@ -12,6 +12,10 @@ const BottomRow = () => {
     setQuarter(quarter + 1)
   }
 
+  const resetQuarter = (event) =>{
+    setQuarter(0)
+  }
+
   return (
     <div className="bottomRow">
       <div className="down">
@@ -30,6 +34,7 @@ const BottomRow = () => {
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">{quarter}</div>
         <button className="awayButtons__fieldGoal" onClick = {quarterStop}>Quarter</button>
+        <button className="awayButtons__fieldGoal" onClick = {resetQuarter}>ResetQ</button>
       </div>
     </div>
   );
