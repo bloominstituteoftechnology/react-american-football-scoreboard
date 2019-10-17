@@ -8,34 +8,34 @@ import BottomRow from "./BottomRow";
   const [pointsHome, setPointsHome] = useState(0);
   const [pointsAway, setPointsAway] = useState(0);
 
-//stretch constants
-const [downVal, setDown] = useState(3);
-const [yardsTilFirst, setYards] = useState(7);
-const [ballOnYard, setBallOn] = useState(21);
-const [quarter, setQuarter] = useState(1);
+// //stretch constants
+// const [downVal, setDown] = useState(3);
+// const [yardsTilFirst, setYards] = useState(7);
+// const [ballOnYard, setBallOn] = useState(21);
+// const [quarter, setQuarter] = useState(1);
 
-//Functions for stretch goals
-const quarterInc = () => {
-  if (quarter < 4) {
-    setQuarter(quarter + 1);
-  } else {
-    setQuarter(4);
-  }
-};
-const downInc = () => {
-  if (downVal < 4) {
-    setDown(downVal + 1);
-  } else {
-    setDown(4);
-  }
-};
-const ballOnInc = () => {
-  if (ballOnYard < 50) {
-    setBallOn(ballOnYard + 1);
-  } else {
-    setBallOn(50);
-  }
-};
+// //Functions for stretch goals
+// const quarterInc = () => {
+//   if (quarter < 4) {
+//     setQuarter(quarter + 1);
+//   } else {
+//     setQuarter(4);
+//   }
+// };
+// const downInc = () => {
+//   if (downVal < 4) {
+//     setDown(downVal + 1);
+//   } else {
+//     setDown(4);
+//   }
+// };
+// const ballOnInc = () => {
+//   if (ballOnYard < 50) {
+//     setBallOn(ballOnYard + 1);
+//   } else {
+//     setBallOn(50);
+//   }
+// };
 
   return (
     <div className="container">
