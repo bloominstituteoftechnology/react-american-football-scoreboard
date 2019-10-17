@@ -1,8 +1,10 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState, useEffect} from "react";
-import "./App.css";
+import React, {useState, useEffect, Component } from "react";
 
+import "./App.css";
+// import "./timer.js";
 import BottomRow from "./BottomRow";
+import { timer } from "rxjs";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -11,6 +13,64 @@ function App() {
   const [seconds, setSeconds] = useState(0);
   const [minuets, setMinuets] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [count, startCount] = useState(0);
+  
+
+  // class timer extends Component {
+  //   constructor (props) {
+  //     super(props)
+  //     this.state = {
+  //       count: 1
+  //     }
+  //   }
+  
+  //   render () {
+  //     const {count} = this.state
+  //     return (
+  //       <div>
+  //         <h1>Current Count: {count}</h1>
+  //       </div>
+  //     )
+  //   }
+  //   // setInterval
+  //   // clearInterval
+  //   componentDidMount () {
+  //     const {startCount} = this.props
+  //     this.setState({
+  //       count: startCount
+  //     })
+  //     this.doIntervalChange()
+  //   }
+  
+  //   doIntervalChange = () => {
+  //       this.myInterval = setInterval(() => {
+  //       this.setState(prevState => ({
+  //         count: prevState.count - 1
+  //       }))
+  //     }, 1000)
+  //   }
+  
+  //   componentWillUnmount () {
+  //     clearInterval(this.myInterval)
+  //   }
+  // }
+  
+  
+  
+  
+  
+  useEffect(() => {
+    let interval = null;
+    if (timer) {
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds + 1);
+      }, 1000);
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
+  
   return (
     <div className="container">
       <section className="scoreboard">
@@ -23,7 +83,7 @@ function App() {
 
             <div className="home__score">{home}</div>
           </div>
-          <div className="timer">{minuets}:{seconds}</div>
+          <div className="timer">{seconds}</div>
           <div className="away">
             <h2 className="away__name">Browns</h2>
             <div className="away__score">{away}</div>
@@ -42,7 +102,9 @@ function App() {
           <button className="awayButtons__fieldGoal"onClick = {() => setAway(away + 7) }>Away Field Goal</button>
         </div>
         <div className = "timer">
-          <button className="timer"onClick = {() => setSeconds(seconds +1)}>Timer</button>
+          <button className="timer"onClick = {() =>  startCount(count + 1)}>Timer</button>
+          
+        
           
           </div>
       </section>
@@ -50,3 +112,4 @@ function App() {
   );
 }
 export default App;
+
