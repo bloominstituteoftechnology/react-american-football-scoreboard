@@ -7,17 +7,20 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [homeScore, setHomeScore] = useState();
   if (setHomeScore === 'Touchdown') {
-    let homeScore = + 3;
+    let homeScore =+ 3;
   } else if (setHomeScore === 'Fieldgoal') {
-    let homeScore = + 7;
+    let homeScore =+ 7;
   }
+  
 
   const [awayScore, setAwayScore] = useState();
-  if (setAwayScore === 'Touchdown') {
-    let awayScore = + 3;
-  } else if (setAwayScore === 'Fieldgoal') {
-    let awayScore = + 7;
+
+    if (setAwayScore === 'Touchdown') {
+      let awayScore =+ 3;
+    } else if (setAwayScore === 'Fieldgoal') {
+      let awayScore =+ 7;
   }
+  
 
   return (
     <div className="container">
