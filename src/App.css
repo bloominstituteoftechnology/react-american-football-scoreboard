@@ -80,6 +80,13 @@
   height: 20rem;
 }
 
+.down__value:hover,
+.quarter__value:hover,
+.toGo__value:hover {
+  cursor: pointer;
+  color: green;
+}
+
 .down,
 .toGo,
 .ballOn,
@@ -106,8 +113,15 @@
   border: 1px solid white;
 }
 
+.lastPlay {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
 .buttons {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
