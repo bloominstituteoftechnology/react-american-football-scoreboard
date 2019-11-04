@@ -4,12 +4,6 @@ import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
-
-console.log(useState)
-console.log(homeScore)
-console.log(setHomeScore)
-console.log(awayScore)
-console.log(setAwayScore)
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
 const [homeScore, setHomeScore] = useState(0);
