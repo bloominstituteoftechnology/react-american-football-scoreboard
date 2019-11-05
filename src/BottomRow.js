@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
+
+
 const BottomRow = () => {
+
+  const [q, setQ] = useState(1); // quarter numbers staring at 1
+
   return (
     <div className="bottomRow">
       <div className="down">
@@ -18,8 +23,14 @@ const BottomRow = () => {
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">4</div>
+        <div className="quarter__value">{q}</div>
       </div>
+     
+      <div className="quarterButton">
+        <button onClick = {() => setQ (q + 1) if(q >4){return null}} className="quarters">Quarter</button>
+        </div>
+        {/* stretch goal to make quarters change  */}
+    
     </div>
   );
 };
