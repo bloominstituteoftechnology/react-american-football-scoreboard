@@ -13,19 +13,19 @@ function App() {
 
 
   const homeTd = (event) => {
-    setHomescore(homeScore + 7);
+    setHomescore(homeScore + 1);
   }
 
   const awayTd = (event) => {
-    setAwayscore(awayScore + 7);
+    setAwayscore(awayScore + 1);
   }
 
   const homeFG = (event) => {
-    setHomescore(homeScore + 3);
+    setHomescore(homeScore + 1);
   }
 
   const awayFG = (event) => {
-    setAwayscore(awayScore + 3);
+    setAwayscore(awayScore + 2);
   }
 
   const reset = (event) => {
@@ -38,15 +38,15 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <h2 className="home__name">Arsenal</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">45:03</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
+            <h2 className="away__name">Chelsea</h2>
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
@@ -55,8 +55,8 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={homeTd}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={homeFG}>Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick={homeTd}>Home Goal</button>
+          <button>Corner(s)</button>
         </div>
 
         <div className="buttons">
@@ -64,8 +64,8 @@ function App() {
         </div>
 
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={awayTd}> Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={awayFG}> Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick={awayTd}> Away Goal</button>
+          <button className="awayButtons__fieldGoal" onClick={awayFG}> Corner(s)</button>
         </div>
       </section>
     </div>

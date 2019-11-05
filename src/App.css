@@ -1,12 +1,12 @@
 :root {
-  --black: #0d0d0d;
+  --purple: #3F1052;
   --red: #ff2d2b;
 }
 
 .scoreboard {
-  width: 58%;
+  width: 100%;
   margin: 10rem auto;
-  background-color: #0b5402;
+  background-color: #3F1052;
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
@@ -28,17 +28,17 @@
   flex-direction: column;
   justify-content: space-around;
   place-items: center;
-  border: 3px solid white;
-  border-radius: 0.5rem;
-  width: 15rem;
+  border-radius: 1em;
+
+  width: 17rem;
 }
 
 .home {
-  background-color: #656565;
+  background-color: red;
 }
 
 .away {
-  background-color: #af750a;
+  background-color: blue;
 }
 
 .home__name,
@@ -54,22 +54,20 @@
 
 .home__score,
 .away__score {
-  font-family: "Ozone";
-  font-size: 7rem;
-  width: 90%;
+  font-family: arial,sans-serif;
+  font-size: 10rem;
+  width: 100%;
   text-align: center;
-  background-color: var(--black);
-  color: var(--red);
+  background-color: #3F1052;
   padding: 5%;
 }
 
 .timer {
-  font-family: "Ozone";
+  font-family: arial,sans-serif;
   font-size: 9rem;
   padding: 2rem;
   text-align: center;
   background-color: var(--black);
-  border: 2px solid white;
   border-radius: 6px;
 }
 
@@ -94,16 +92,15 @@
 .toGo__value,
 .ballOn__value,
 .quarter__value {
-  font-family: "Ozone";
+  font-family: arial,sans-serif;
   font-size: 5rem;
-  color: var(--red);
-  width: 7rem;
+  color: var(--white);
+  width: 9rem;
   text-align: center;
-  background-color: var(--black);
+  background-color: #3F1052;
   margin-top: 1rem;
   border-radius: 4px;
   padding: 1.6rem;
-  border: 1px solid white;
 }
 
 .buttons {
