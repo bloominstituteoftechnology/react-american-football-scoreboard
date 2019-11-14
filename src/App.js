@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <div className="cogit ntainer">
+    <div className="container">
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
