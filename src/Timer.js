@@ -48,7 +48,7 @@ function Timer(){
     }, [isActive, min]);
 
 return( <div>
-            <h3>{min}:{second}</h3>
+            <h3>00:{min}:{second}</h3>
             <button 
                 className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} 
                 onClick={toggle}>
@@ -58,7 +58,7 @@ return( <div>
             className="button button-primary"
                 type="button"
                 onClick ={reset}>
-                    Restart
+                    Clear
             </button>
     </div>
     )};

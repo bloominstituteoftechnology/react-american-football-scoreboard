@@ -132,9 +132,13 @@
 .awayButtons__fieldGoal,
 .awayButtons__extaPoint,
 .homeButtons__extaPoint {
-  margin: 1rem;
+  margin:1rem 5rem;
   border-radius: 4px;
 }
 .button-primary{
   font-family: inherit;
+  font-size: 28px;
+}
+.bottomRowNewButtons{
+  margin-top: 10px;
 }

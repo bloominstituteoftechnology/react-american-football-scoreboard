@@ -1,16 +1,18 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState}  from "react";
+import React, { useState }  from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 import Timer from "./Timer.js"
+// import Timer from "./Timer.js"
 //Broke down the App component into 2 smaller compnents: ScoreBoard and Buttons.
 // When I import them into App component they render but the buttons are not updating the score on the score board.
-//import ScoreBoard from "./scoreboard.js"
-//import Buttons from "./buttons";
+// import {ScoreBoard} from "./scoreboard.js"
+// import {Buttons} from "./buttons";
 
 function App() {
   const [home, setHome] = useState(0);
   const [away, setAway] = useState(0);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -27,11 +29,17 @@ function App() {
           <div className="away__score">{away}</div>
         </div>
       </div> 
-      {/* <ScoreBoard/> */}
+      {/* <ScoreBoard
+      home={home}
+      away={away}/> */}
         <BottomRow />
       </section>
       <section className="buttons">
-        {/* <Buttons/> */}
+        {/* <Buttons
+        home={home}
+        away={away}
+       
+        /> */}
       <div className="homeButtons">
             <button 
                 className="homeButtons__touchdown"
@@ -59,7 +67,7 @@ function App() {
             </button>
         </div>
 
-         <div className="awayButtons">
+         <div className="awayButtons"> 
              <button 
                 className="awayButtons__touchdown"
                 onClick={() => {
@@ -82,6 +90,15 @@ function App() {
                 }}>
                     Away Extra Point
             </button>
+            <button 
+                className= "reset"
+                onClick={() => {
+                setAway(0);
+                setHome(0);
+                }}>
+                    Reset Game
+            </button>
+            
         </div>
       </section>
     </div>
