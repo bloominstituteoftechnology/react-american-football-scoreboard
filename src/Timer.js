@@ -1,6 +1,4 @@
 import React,{ useState, useEffect } from "react";
-//import { statement } from "@babel/template";
-
 
 function Timer(){
     let [second, setSecond] = useState(0);
