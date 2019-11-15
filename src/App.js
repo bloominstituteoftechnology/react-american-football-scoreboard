@@ -9,6 +9,14 @@ function App() {
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
 
+  //button functionality
+
+  const homeTouchdown = () => setHomeScore(homeScore + 7);
+  const homeFieldGoal = () => setHomeScore(homeScore + 3);
+
+  const awayTouchdown = () => setAwayScore(awayScore + 7);
+  const awayFieldGoal = () => setAwayScore(awayScore + 3);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -18,7 +26,7 @@ function App() {
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
-            <div className="home__score">32</div>
+            <div className="home__score">{homeScore + 32}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
