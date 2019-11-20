@@ -3,60 +3,51 @@ import React,{ useState, useEffect } from "react";
 function Timer(){
     let [second, setSecond] = useState(0);
     let [isActive, setIsActive] = useState(false);
-    let [min, setMin]= useState(0);
+    let [min, setMin] = useState(0);
+    const [totalTime, setTotalTime] = useState(0);
+
   
-    function toggle(){
+    function start(){
         setIsActive(!isActive);
     }
     function reset(){
         setSecond(0);
+        setMin(0);
+        setTotalTime(0);
         setIsActive(false);
     }
+    function calculateClock(time) {
+        const mins = Math.floor(time / 60);
+        const seconds = time - mins * 60;
+        setMin(mins);
+        setSecond(seconds);
+      }
     
     useEffect(() => {
         let interval = null;
         if(isActive){
             interval = setInterval(() => {
-            return  setSecond(second +1);
+                setTotalTime(totalTime + 1);
+                calculateClock(totalTime + 1);
             }, 1000);
-      
-        } if ( second === 60){            
-            reset();
-            setSecond(0);
-            setIsActive(true);
-        } 
-        else if (!isActive  && second !== 0){
-            clearInterval(interval);
         }
-        return ()=>clearInterval(interval); 
-    },[isActive, second]);
 
-    useEffect(() => {
-        let minInterval = null;
-        if (isActive){
-            minInterval = setInterval(() => {
-                setMin(min+1);
-            }, 60000);
-        } if(min === 15){
-            reset();
-        }else if(!isActive  && min !== 0){
-            clearInterval(minInterval);
-        }
-        return ()=>clearInterval(minInterval); 
-    }, [isActive, min]);
+        return () => clearInterval(interval); 
+     }, [isActive, totalTime]);
 
+        
 return( <div>
             <h3>00:{min}:{second}</h3>
             <button 
                 className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} 
-                onClick={toggle}>
-                    Start
+                onClick={start}>
+                Start
             </button>
             <button 
-            className="button button-primary"
+                className="button button-primary"
                 type="button"
                 onClick ={reset}>
-                    Clear
+                Clear
             </button>
     </div>
     )};
