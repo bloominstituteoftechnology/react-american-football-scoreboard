@@ -12,7 +12,7 @@ function App() {
 
   // const homeTouchdown = () => setHomeScore(homeScore + 7);
   // const homeFieldGoal = () => setHomeScore(homeScore + 3);
-  // const awayTouchdown = () => setAwayScore(awayScore +7);
+  // const awayTouchdown = () => setAwayScore(awayScore + 7);
   // const awayFieldGoal = () => setAwayScore(awayScore + 3);
 
   // * * * * * * IMPLEMENTATION WITH scoreHandler
@@ -28,28 +28,32 @@ function App() {
 
   const advanceQuarter = () => {
     if (quarter === 4) quarter = 0;
-    setQuarter(++quarter);
+    setQuarter(quarter + 1);
   };
 
   // * * * * * * TIMER FUNCTIONALITY
 
   let [secondsLeft, setSecondsLeft] = useState(900);
 
+  // TIME DISPLAY
   let minutes = Math.floor(secondsLeft / 60);
   let seconds = Math.floor(secondsLeft % 60);
   // leading zero if value is less than ten
   minutes = minutes < 10 ? '0' + minutes : minutes;
   seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  const countDown = () => {
-    setSecondsLeft(--secondsLeft);
-  };
-
   useEffect(() => {
-    const timer = setInterval((countDown), 1000);
+    const timer = setInterval(() => {
+      setSecondsLeft(secondsLeft - 1);
+      console.log(secondsLeft);
+    }, 1000);
+    
     if (secondsLeft === 0) {
       clearInterval(timer);
+      console.log('timer stopped');
     }
+    
+    return () => clearInterval(timer);
   });
 
   return (
