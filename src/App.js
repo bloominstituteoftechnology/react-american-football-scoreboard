@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from "react";
+import React, { useState, useEffect, } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -8,19 +8,21 @@ function App() {
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
   
-  // * * * * * * IMPLEMENTATION WITHOUT scoreHandler: start
+  // * * * * * * IMPLEMENTATION WITHOUT scoreHandler
 
   // const homeTouchdown = () => setHomeScore(homeScore + 7);
   // const homeFieldGoal = () => setHomeScore(homeScore + 3);
   // const awayTouchdown = () => setAwayScore(awayScore +7);
   // const awayFieldGoal = () => setAwayScore(awayScore + 3);
 
-  // * * * * * * IMPLEMENTATION WITHOUT scoreHandler: end
+  // * * * * * * IMPLEMENTATION WITH scoreHandler
 
   const scoreHandler = (team, points) => {
     if (team === 'home') setHomeScore(homeScore + points);
     if (team === 'away') setAwayScore(awayScore + points);
   };
+
+  // * * * * * * QUARTER FUNCTIONALITY
 
   let [quarter, setQuarter] = useState(1);
 
@@ -28,6 +30,27 @@ function App() {
     if (quarter === 4) quarter = 0;
     setQuarter(++quarter);
   };
+
+  // * * * * * * TIMER FUNCTIONALITY
+
+  let [secondsLeft, setSecondsLeft] = useState(900);
+
+  let minutes = Math.floor(secondsLeft / 60);
+  let seconds = Math.floor(secondsLeft % 60);
+  // leading zero if value is less than ten
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  const countDown = () => {
+    setSecondsLeft(--secondsLeft);
+  };
+
+  useEffect(() => {
+    const timer = setInterval((countDown), 1000);
+    if (secondsLeft === 0) {
+      clearInterval(timer);
+    }
+  });
 
   return (
     <div className="container">
@@ -40,7 +63,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{minutes}:{seconds}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
