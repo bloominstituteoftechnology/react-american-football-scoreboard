@@ -10,16 +10,23 @@ function App() {
   
   // * * * * * * IMPLEMENTATION WITHOUT scoreHandler: start
 
-  // const homeTouchdown = event => setHomeScore(homeScore + 7);
-  // const homeFieldGoal = event => setHomeScore(homeScore + 3);
-  // const awayTouchdown = event => setAwayScore(awayScore +7);
-  // const awayFieldGoal = event => setAwayScore(awayScore + 3);
+  // const homeTouchdown = () => setHomeScore(homeScore + 7);
+  // const homeFieldGoal = () => setHomeScore(homeScore + 3);
+  // const awayTouchdown = () => setAwayScore(awayScore +7);
+  // const awayFieldGoal = () => setAwayScore(awayScore + 3);
 
   // * * * * * * IMPLEMENTATION WITHOUT scoreHandler: end
 
   const scoreHandler = (team, points) => {
     if (team === 'home') setHomeScore(homeScore + points);
     if (team === 'away') setAwayScore(awayScore + points);
+  };
+
+  let [quarter, setQuarter] = useState(1);
+
+  const advanceQuarter = () => {
+    if (quarter === 4) quarter = 0;
+    setQuarter(++quarter);
   };
 
   return (
@@ -39,7 +46,7 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarter={quarter} />
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -50,6 +57,9 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => scoreHandler('away', 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => scoreHandler('away', 3)}>Away Field Goal</button>
+        </div>
+        <div className="gameButtons">
+  <button className="gameButtons__nextQuarter" onClick={advanceQuarter}>Next Quarter</button>
         </div>
       </section>
     </div>
