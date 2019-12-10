@@ -1,10 +1,13 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
 const BottomRow = () => {
   return (
     <div className="bottomRow">
-      <div className="down">
+      {
+        <h2 className="loading">*Live Commentary*</h2>
+
+        /* <div className="down">
         <h3 className="down__title">Down</h3>
         <div className="down__value">3</div>
       </div>
@@ -19,7 +22,8 @@ const BottomRow = () => {
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">4</div>
-      </div>
+      </div> */
+      }
     </div>
   );
 };
