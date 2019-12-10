@@ -10,10 +10,9 @@ function App() {
 
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
-
   console.log(useState(0));
 
-  
+
   const homeTouchDown = () => {
     setHomeScore(homeScore + 6);
   }
@@ -22,11 +21,11 @@ function App() {
   }
 
   const homeFG = () => {
-    setHomeScore(homeScore + 1);
+    setHomeScore(homeScore + 2);
   }
 
   const awayFG = () => {
-    setAwayScore(awayScore + 1);
+    setAwayScore(awayScore + 2);
   }
 
   const reset = () => {
