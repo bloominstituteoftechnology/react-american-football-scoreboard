@@ -15,7 +15,7 @@ function App() {
   //compound for loop function for minutes
   useEffect(() => {
     const clock = setTimeout(() => {
-      if (minutes > 0 ) {
+      if (minutes > 0) {
         setMinutes(minutes - 1);
       } else {
         clearTimeout(clock);
