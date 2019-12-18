@@ -73,3 +73,5 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Play around with the styling and make this project your own! Maybe make it a soccer (non-american football) scoreboard, or a rugby or baseball scoreboard
 - [ ] Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - [ ] Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)
+
+<!-- Welcome to React -->
