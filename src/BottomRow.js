@@ -14,13 +14,13 @@ function BottomRow() {
   }
 
   //////////////////// Yards To Go ////////////////////
-  const [yardsToGo, setYardsToGo] = useState(1);
+  const [yardsToGo, setYardsToGo] = useState(0);
 
   const addOneYardToGo = (e) => {
     if (yardsToGo <= 98) {
       setYardsToGo(yardsToGo + 1)
     } else {
-      setYardsToGo(1)
+      setYardsToGo(0)
     }
   }
 
@@ -28,7 +28,7 @@ function BottomRow() {
     if (yardsToGo <= 94) {
       setYardsToGo(yardsToGo + 5)
     } else {
-      setYardsToGo(1)
+      setYardsToGo(0)
     }
   }
 
@@ -36,7 +36,7 @@ function BottomRow() {
     if (yardsToGo <= 89) {
       setYardsToGo(yardsToGo + 10)
     } else {
-      setYardsToGo(1)
+      setYardsToGo(0)
     }
   }
 
