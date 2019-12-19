@@ -35,6 +35,7 @@ function BottomRow() {
       </div>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
+        {/* Type In The Yard Line The Ball Is On: <input></input> */}
         <div className="ballOn__value">21</div>
       </div>
       <div className="quarter">
