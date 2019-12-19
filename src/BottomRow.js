@@ -48,7 +48,7 @@ function BottomRow() {
   const [yardLine, setYardLine] = useState(1);
 
   const addOneYardLine = (e) => {
-    if (yardLine <= 98) {
+    if (yardLine <= 49) {
       setYardLine(yardLine + 1)
     } else {
       setYardLine(1)
@@ -56,7 +56,7 @@ function BottomRow() {
   }
 
   const addFiveYardsLine = (e) => {
-    if (yardLine <= 94) {
+    if (yardLine <= 45) {
       setYardLine(yardLine + 5)
     } else {
       setYardLine(1)
@@ -64,7 +64,7 @@ function BottomRow() {
   }
 
   const addTenYardsLine = (e) => {
-    if (yardLine <= 89) {
+    if (yardLine <= 40) {
       setYardLine(yardLine + 10)
     } else {
       setYardLine(1)
