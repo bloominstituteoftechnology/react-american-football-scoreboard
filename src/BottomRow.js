@@ -17,27 +17,31 @@ function BottomRow() {
   const [yardsToGo, setYardsToGo] = useState(1);
 
   const addOneYardToGo = (e) => {
-    if (yardsToGo <= 99) {
+    if (yardsToGo <= 98) {
       setYardsToGo(yardsToGo + 1)
     } else {
-      setDownNumber(1)
+      setYardsToGo(1)
     }
   }
 
   const addFiveYardsToGo = (e) => {
-    if (yardsToGo <= 95) {
-      setYardsToGo(yardsToGo + 1)
+    if (yardsToGo <= 94) {
+      setYardsToGo(yardsToGo + 5)
     } else {
-      setDownNumber(1)
+      setYardsToGo(1)
     }
   }
 
   const addTenYardsToGo = (e) => {
-    if (yardsToGo <= 90) {
-      setYardsToGo(yardsToGo + 1)
+    if (yardsToGo <= 89) {
+      setYardsToGo(yardsToGo + 10)
     } else {
-      setDownNumber(1)
+      setYardsToGo(1)
     }
+  }
+
+  const goalIsLessThan10Yards = (e) => {
+    setYardsToGo("Goal")
   }
 
   //////////////////// Yard Line ////////////////////
@@ -67,7 +71,11 @@ function BottomRow() {
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
         {/* Type In Yards To Go: <input></input> */}
-        <div className="toGo__value">7</div>
+        <button className="add_one_yard" onClick={addOneYardToGo}>+1</button>
+        <button className="add_five_yards" onClick={addFiveYardsToGo}>+5</button>
+        <button className="add_ten_yards" onClick={addTenYardsToGo}>+10</button>
+        <button className="goal_less_than_10" onClick={goalIsLessThan10Yards}>"Goal"</button>
+        <div className="toGo__value">{yardsToGo}</div>
       </div>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
