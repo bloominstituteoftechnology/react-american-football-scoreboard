@@ -25,6 +25,10 @@ function App() {
 		setTigersScore(tigersScore + 3);
 	};
 
+	const timeUpdate = (e) => {
+		setTimer(timer);
+	};
+
 	// const reset = (e) => {
 	// 	setLionsScore(setTigersScore(tigersScore, (lionsScore = 0)));
 	// };
