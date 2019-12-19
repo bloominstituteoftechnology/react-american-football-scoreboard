@@ -17,7 +17,7 @@ function BottomRow() {
     if (quarterNumber <= 3) {
       setQuarterNumber(quarterNumber + 1)
     } else {
-      setQuarterNumber("Game Over!")
+      setQuarterNumber("End")
     }
   }
 
@@ -30,6 +30,7 @@ function BottomRow() {
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
+        {/* Type In Yards To Go: <input></input> */}
         <div className="toGo__value">7</div>
       </div>
       <div className="ballOn">
