@@ -47,6 +47,30 @@ function BottomRow() {
   //////////////////// Yard Line ////////////////////
   const [yardLine, setYardLine] = useState(1);
 
+  const addOneYardLine = (e) => {
+    if (yardLine <= 98) {
+      setYardLine(yardLine + 1)
+    } else {
+      setYardLine(1)
+    }
+  }
+
+  const addFiveYardsLine = (e) => {
+    if (yardLine <= 94) {
+      setYardLine(yardLine + 5)
+    } else {
+      setYardLine(1)
+    }
+  }
+
+  const addTenYardsLine = (e) => {
+    if (yardLine <= 89) {
+      setYardLine(yardLine + 10)
+    } else {
+      setYardLine(1)
+    }
+  }
+
   //////////////////// Quarter Number ////////////////////
   const [quarterNumber, setQuarterNumber] = useState(1);
 
@@ -80,7 +104,10 @@ function BottomRow() {
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
         {/* Type In The Yard Line The Ball Is On: <input></input> */}
-        <div className="ballOn__value">21</div>
+        <button className="add_one_yard" onClick={addOneYardLine}>+1</button>
+        <button className="add_five_yards" onClick={addFiveYardsLine}>+5</button>
+        <button className="add_ten_yards" onClick={addTenYardsLine}>+10</button>
+        <div className="ballOn__value">{yardLine}</div>
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
