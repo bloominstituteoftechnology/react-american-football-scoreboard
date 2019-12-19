@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-const Scoring = () => {
-	const [ lions, setLions ] = useState(0);
-	const [ tigers, setTigers ] = useState(0);
-};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
