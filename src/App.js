@@ -7,6 +7,7 @@ function App() {
 	//TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 	const [ lionsScore, setLionsScore ] = useState(0);
 	const [ tigersScore, setTigersScore ] = useState(0);
+	const [ timer, setTimer ] = useState(0);
 
 	const homeTouchdown = (e) => {
 		setLionsScore(lionsScore + 7);
@@ -39,7 +40,7 @@ function App() {
 
 						<div className="home__score">{lionsScore}</div>
 					</div>
-					<div className="timer">00:03</div>
+					<div className="timer">{timer}</div>
 					<div className="away">
 						<h2 className="away__name">Tigers</h2>
 						<div className="away__score">{tigersScore}</div>
