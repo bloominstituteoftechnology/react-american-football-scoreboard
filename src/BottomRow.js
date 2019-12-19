@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import "./App.css";
 
 function BottomRow() {
+  //////////////////// Down Number ////////////////////
   const [downNumber, setDownNumber] = useState(1);
-  const [quarterNumber, setQuarterNumber] = useState(1);
 
   const nextDown = (e) => {
     if (downNumber <= 3) {
@@ -12,6 +12,39 @@ function BottomRow() {
       setDownNumber(1)
     }
   }
+
+  //////////////////// Yards To Go ////////////////////
+  const [yardsToGo, setYardsToGo] = useState(1);
+
+  const addOneYardToGo = (e) => {
+    if (yardsToGo <= 99) {
+      setYardsToGo(yardsToGo + 1)
+    } else {
+      setDownNumber(1)
+    }
+  }
+
+  const addFiveYardsToGo = (e) => {
+    if (yardsToGo <= 95) {
+      setYardsToGo(yardsToGo + 1)
+    } else {
+      setDownNumber(1)
+    }
+  }
+
+  const addTenYardsToGo = (e) => {
+    if (yardsToGo <= 90) {
+      setYardsToGo(yardsToGo + 1)
+    } else {
+      setDownNumber(1)
+    }
+  }
+
+  //////////////////// Yard Line ////////////////////
+  const [yardLine, setYardLine] = useState(1);
+
+  //////////////////// Quarter Number ////////////////////
+  const [quarterNumber, setQuarterNumber] = useState(1);
 
   const nextQuarter = (e) => {
     if (quarterNumber <= 3) {
@@ -23,6 +56,7 @@ function BottomRow() {
     }
   }
 
+  //////////////////// RETURN ////////////////////
   return (
     <div className="bottomRow">
       <div className="down">
