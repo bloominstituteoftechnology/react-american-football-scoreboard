@@ -16,8 +16,10 @@ function BottomRow() {
   const nextQuarter = (e) => {
     if (quarterNumber <= 3) {
       setQuarterNumber(quarterNumber + 1)
-    } else {
+    } else if (quarterNumber === 4) {
       setQuarterNumber("End")
+    } else {
+      setQuarterNumber(1)
     }
   }
 
