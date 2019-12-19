@@ -23,6 +23,10 @@ const BottomRow = () => {
 		setToGo(toGo - 1);
 	};
 
+	if (down > 4) {
+		return (down = 1);
+	}
+
 	return (
 		<div className="bottomRow">
 			<div className="down">
