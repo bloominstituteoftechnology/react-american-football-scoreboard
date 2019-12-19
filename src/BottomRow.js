@@ -1,12 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
-const BottomRow = () => {
+function BottomRow() {
+  const [downNumber, setDownNumber] = useState(1);
+  const [quarterNumber, setQuarterNumber] = useState(1);
+
+  const nextDown = (e) => {
+    if (downNumber <= 3) {
+      setDownNumber(downNumber + 1)
+    } else {
+      setDownNumber(1)
+    }
+  }
+
+  const nextQuarter = (e) => {
+    if (quarterNumber <= 3) {
+      setQuarterNumber(quarterNumber + 1)
+    } else {
+      setQuarterNumber("Game Over!")
+    }
+  }
+
   return (
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
+        <button className="next_down" onClick={nextDown}>Next Down</button>
+        <div className="down__value">{downNumber}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
@@ -18,7 +38,8 @@ const BottomRow = () => {
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">4</div>
+        <button className="next_quarter" onClick={nextQuarter}>Next Quarter</button>
+        <div className="quarter__value">{quarterNumber}</div>
       </div>
     </div>
   );
