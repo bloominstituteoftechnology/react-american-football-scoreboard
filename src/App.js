@@ -11,7 +11,7 @@ import QuarterButton from './components/QuarterButton';
 function App() {
 
   const [homeScore, setHomeScore] = useState(32);
-  const [awayScore, setAwayScore] = useState(0);
+  const [awayScore, setAwayScore] = useState(3);
   const [quarter, setQuarter] =useState(1);
 
   const homeScorer = () =>{
