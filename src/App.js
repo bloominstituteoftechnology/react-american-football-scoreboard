@@ -62,8 +62,7 @@ function App() {
                         }
                         return () => clearInterval(int);
         },
-        [ time, isActive ],
-        );
+);
 
     const leader = homeScore > awayScore ? `Home Team Wins` : `Away Team Wins`;
 
