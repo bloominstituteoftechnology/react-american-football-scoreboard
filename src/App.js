@@ -1,12 +1,12 @@
 //TODO: STEP 1 - Import the useState hook.
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import BottomRow from './BottomRow';
 
 function App() {
 	//TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 	const [ homeScore, setHomeScore ] = useState(0);
-	const [ awayScore, setAwayScore ] = usesState(0);
+	const [ awayScore, setAwayScore ] = useState(0);
 
 	console.log(useState(0));
 
@@ -24,11 +24,6 @@ function App() {
 
 	const awayFG = () => {
 		setAwayScore(homeScore + 2);
-	};
-
-	const reset = () => {
-		setHomeScore(0);
-		setAwayScore(0);
 	};
 
 	return (
@@ -59,7 +54,7 @@ function App() {
 					</button>
 				</div>
 				<div className="awayButtons">
-					<button className="awayButtons__touchdown" onClick={awayTouchDown}>
+					<button className="awayButtons__touchdown" onClick={AwayTouchDown}>
 						Away Touchdown
 					</button>
 					<button className="awayButtons__fieldGoal" onClick={awayFG}>
