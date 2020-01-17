@@ -3,20 +3,29 @@ import "./App.css";
 
 const BottomRow = () => {
   const [quarter, setQuarter] = useState(1);
+  const [down, setDown] = useState(1);
 
   const changeQuarter = () => {
     if (quarter <= 3) {
       setQuarter(quarter + 1);
     } else {
-      setQuarter(1)
+      setQuarter(1);
     }
-  }
+  };
+
+  const changeDown = () => {
+    if (down <= 3) {
+      setDown(down + 1);
+    } else {
+      setDown(1);
+    }
+  };
 
   return (
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
+        <div className="down__value">{down}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
@@ -30,7 +39,10 @@ const BottomRow = () => {
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">{quarter}</div>
       </div>
-      <button className="quarter_button" onClick={changeQuarter}>Change Quarter</button>
+      <div className="scoreboard_buttons">
+        <button onClick={changeQuarter}>Change Quarter</button>
+        <button onClick={changeDown}>Change Down</button>
+      </div>
     </div>
   );
 };
