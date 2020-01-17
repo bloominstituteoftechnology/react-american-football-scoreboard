@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -8,6 +8,8 @@ function App() {
 
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [minutes, setMinutes] = useState(14);
+  const[seconds, setSeconds] = useState(59);
 
   const homeTouchdown = () => {
     setHomeScore(homeScore + 7);
@@ -25,6 +27,28 @@ function App() {
     setAwayScore(awayScore + 3);
   };
 
+  useEffect(() => {
+    let interval = null;
+    if (minutes >= 0) {
+      interval = setInterval(() => {
+        setMinutes(minutes => minutes - 1);
+      }, 59000);
+    }
+    return () => clearInterval(interval);
+  }, [minutes]);
+
+  useEffect(() => {
+    let interval = null;
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds - 1);
+      }, 1000);
+    } else if (seconds == 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [seconds]);
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -36,7 +60,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{minutes}:{seconds}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
