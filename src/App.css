@@ -6,7 +6,7 @@
 .scoreboard {
   width: 58%;
   margin: 10rem auto;
-  background-color: #0b5402;
+  background-color: black;
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
@@ -34,20 +34,21 @@
 }
 
 .home {
-  background-color: #656565;
+  background-color: #654321;
 }
 
 .away {
-  background-color: #af750a;
+  background-color:yellow;
 }
-
+.away__name{
+    color:black;
+}
 .home__name,
 .away__name,
 .down__title,
 .toGo__title,
 .ballOn__title,
 .quarter__title {
-  text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
 }
@@ -59,7 +60,7 @@
   width: 90%;
   text-align: center;
   background-color: var(--black);
-  color: var(--red);
+  color: white;
   padding: 5%;
 }
 
@@ -96,7 +97,7 @@
 .quarter__value {
   font-family: "Ozone";
   font-size: 5rem;
-  color: var(--red);
+  color: white;
   width: 7rem;
   text-align: center;
   background-color: var(--black);
