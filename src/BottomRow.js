@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
+//Stretch Goals completed
+
 const BottomRow = () => {
   const [currentQuarter, setCurrentQuarter] = useState(1);
 
