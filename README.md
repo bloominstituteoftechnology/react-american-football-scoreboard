@@ -16,22 +16,22 @@ In this project, you build an app that diplays a scoreboard for an american foot
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd american-football-scoreboard`
-- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your team lead as collaborator on Github.
+- [X] Clone your OWN version of the repository in your terminal
+- [X] CD into the project base directory `cd american-football-scoreboard`
+- [X] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [X] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repository). **Please don't merge your own pull request**
+- [X] Add your team lead as a reviewer on the pull-request
+- [X] Your team lead will count the project as complete by merging the branch back into master.
+- [X] Do your magic!
 
 ## Minimum Viable Product
 
@@ -41,28 +41,28 @@ Follow these steps for completing your project.
 
 ### STEP 1 & 2 - Adding Team Scores to the Component's State
 
-- [ ] Import the `useState` hook
-- [ ] Set up the state values for the Lions team score using the state hook
+- [X] Import the `useState` hook
+- [X] Set up the state values for the Lions team score using the state hook
 
 ```js
 const [value, setValue] = useState(); // Give these better names, and decide whether you want to pass an initial score into the state hook as the initialValue
 ```
 
-- [ ] Set up the state value for the Tigers team score using a second state hook call
+- [X] Set up the state value for the Tigers team score using a second state hook call
 
 ### STEP 3 - Render the Scores to the DOM
 
-- [ ] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
-- [ ] Render the state values from what we just set up in steps 1 and 2
-- [ ] Play around with different initial values to test if they are rendering on the DOM correctly
+- [X] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
+- [X] Render the state values from what we just set up in steps 1 and 2
+- [X] Play around with different initial values to test if they are rendering on the DOM correctly
 
 ### STEP 4 - Add Click Functionality to Increment the Scores
 
-- [ ] Add the `onClick` handler to each function
-- [ ] Determine how much you will need to increment the score for each button
-  - [ ] A touchdown is worth 7 points (assume the following extra point is made)
-  - [ ] A field goal is worth 3 points
-- [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
+- [X] Add the `onClick` handler to each function
+- [X] Determine how much you will need to increment the score for each button
+  - [X] A touchdown is worth 7 points (assume the following extra point is made)
+  - [X] A field goal is worth 3 points
+- [X] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
 ## Stretch Problems
 
