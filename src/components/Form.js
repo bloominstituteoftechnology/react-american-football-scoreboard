@@ -10,8 +10,6 @@ function Form(props){
     setInput({ ...input, [e.target.name]: e.target.value });
   }; 
 
-  console.log('I am the homeTeam ',input.homeTeam)
-
    return (
        <>
        <form>

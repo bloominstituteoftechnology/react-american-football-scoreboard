@@ -6,14 +6,13 @@ import TopRow from './TopRow'
 
 
 function ScoreBoard(props){
-    console.log('These are the props:',props);
+
     const [awayScore, setAwayScore]=useState(0);
     const [homeScore, setHomeScore]=useState(0);
     const  addAwayTD = () => setAwayScore(awayScore+7);
     const  addAwayFG = () => setAwayScore(awayScore+3);
     const  addHomeTD = () => setHomeScore(homeScore+7);
     const  addHomeFG = () => setHomeScore(homeScore+3);
-    console.log("score board props", props)
     
   return (
       

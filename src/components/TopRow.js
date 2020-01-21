@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default function TopRow(props){
-console.log('I am toprow\'s props: ',props);
-console.log('I am the homeName prop: ',props.homeTeam)
-
     return (
 
 <div className="topRow"> 

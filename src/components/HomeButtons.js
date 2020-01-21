@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function HomeButtons(props){
 
-    console.log('I am HomeButton\'s props:', props)
    
     return (
 
