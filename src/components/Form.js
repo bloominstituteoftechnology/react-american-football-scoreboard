@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
-import ScoreBoard from './ScoreBoard'
+import React, {useState} from 'react';
+import ScoreBoard from './ScoreBoard';
 
 
-function Form(){
+function Form(props){
 
    const [input, setInput]=useState({});
    
@@ -10,21 +10,20 @@ function Form(){
     setInput({ ...input, [e.target.name]: e.target.value });
   }; 
 
-  console.log(input)
+  console.log('I am the homeTeam ',input.homeTeam)
 
    return (
        <>
        <form>
-           <label>
-               Home Team
-           </label>
-                <input type='text' name='homeTeam' onChange={handleChanges} placeholder='Home Team' value={input.homeTeam}>
-                </input>
-            <label>
-               Away Team
-           </label>
-                <input type='text' name='awayTeam' onChange={handleChanges} placeholder='Away Team' value={input.awayTeam}>
-                </input>
+          
+           <label>Home Team</label>
+
+                <input type='text' name='homeTeam' onChange={handleChanges} placeholder='Home Team' value={input.homeTeam}></input>
+            
+            <label>Away Team</label>
+                
+                <input type='text' name='awayTeam' onChange={handleChanges} placeholder='Away Team' value={input.awayTeam}></input>
+
        </form>
        <ScoreBoard input={input} />
        </>

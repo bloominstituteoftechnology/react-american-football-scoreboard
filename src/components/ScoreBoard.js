@@ -13,12 +13,14 @@ function ScoreBoard(props){
     const  addAwayFG = () => setAwayScore(awayScore+3);
     const  addHomeTD = () => setHomeScore(homeScore+7);
     const  addHomeFG = () => setHomeScore(homeScore+3);
+    console.log("score board props", props)
     
   return (
       
+      
         <div className="container">
       <section className="scoreboard">
-        <TopRow homeName={props.input.homeTeam} awayName={props.input.awayTeam} homeScore={homeScore} awayScore={awayScore}/>
+        <TopRow input={props.input} homeScore={homeScore} awayScore={awayScore}/>
         <BottomRow />
       </section>
       <section className="buttons">
