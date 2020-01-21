@@ -5,7 +5,7 @@ export default function TopRow(props){
 
 <div className="topRow"> 
     <div className="home">
-        <h2 className="home__name">{progitps.input.homeTeam}</h2>
+        <h2 className="home__name">{props.input.homeTeam}</h2>
         <div className="home__score">{props.homeScore}</div>
         </div>
     <div className="timer">15:00</div>
