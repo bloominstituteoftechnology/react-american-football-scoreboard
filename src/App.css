@@ -54,7 +54,7 @@
 
 .home__score,
 .away__score {
-  font-family: "Ozone";
+  font-family: 'Ozone';
   font-size: 7rem;
   width: 90%;
   text-align: center;
@@ -64,7 +64,7 @@
 }
 
 .timer {
-  font-family: "Ozone";
+  font-family: 'Ozone';
   font-size: 9rem;
   padding: 2rem;
   text-align: center;
@@ -94,7 +94,7 @@
 .toGo__value,
 .ballOn__value,
 .quarter__value {
-  font-family: "Ozone";
+  font-family: 'Ozone';
   font-size: 5rem;
   color: var(--red);
   width: 7rem;
@@ -119,4 +119,33 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+}
+.homeButtons_extraPoint,
+.awayButtons_extraPoint {
+  margin: 1rem;
+  border-radius: 4px;
+  background: grey;
+  color: black;
+}
+
+.homeButtons_extraPoint:hover,
+.awayButtons_extraPoint:hover {
+  margin: 1rem;
+  border-radius: 4px;
+  color: whitesmoke;
+}
+
+.homeButtons_twoPoints,
+.awayButtons_twoPoints {
+  margin: 1rem;
+  border-radius: 4px;
+  background: lightgrey;
+  color: black;
+}
+
+.homeButtons_twoPoints:hover,
+.awayButtons_twoPoints:hover {
+  margin: 1rem;
+  border-radius: 4px;
+  color: white;
 }

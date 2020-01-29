@@ -5,8 +5,9 @@ import BottomRow from './BottomRow';
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  const [lionsTeam, setLionsTeam] = useState(0);
-  const [tigersTeam, setTigersTeam] = useState(0);
+  const initialState = 0;
+  const [lionsTeam, setLionsTeam] = useState(initialState);
+  const [tigersTeam, setTigersTeam] = useState(initialState);
   return (
     <div className='container'>
       <section className='scoreboard'>
@@ -39,6 +40,16 @@ function App() {
             className='homeButtons__fieldGoal'>
             Home Field Goal
           </button>
+          <button
+            className='homeButtons_extraPoint'
+            onClick={() => setLionsTeam(lionsTeam + 1)}>
+            Home Extra Point
+          </button>
+          <button
+            className='homeButtons_twoPoints'
+            onClick={() => setLionsTeam(lionsTeam + 2)}>
+            Home Two Points
+          </button>
         </div>
         <div className='awayButtons'>
           <button
@@ -51,7 +62,27 @@ function App() {
             className='awayButtons__fieldGoal'>
             Away Field Goal
           </button>
+          <button
+            className='homeButtons_extraPoint'
+            onClick={() => setTigersTeam(tigersTeam + 1)}>
+            Away Extra Point
+          </button>
+          <button
+            className='homeButtons_twoPoints'
+            onClick={() => setTigersTeam(tigersTeam + 2)}>
+            Away Two Points
+          </button>
         </div>
+        <button
+          className='homeButtons_extraPoint'
+          onClick={() => setLionsTeam(initialState)}>
+          Home Reset
+        </button>
+        <button
+          className='homeButtons_twoPoints'
+          onClick={() => setTigersTeam(initialState)}>
+          Away Reset
+        </button>
       </section>
     </div>
   );
