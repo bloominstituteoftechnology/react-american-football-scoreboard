@@ -5,12 +5,12 @@ import BottomRow from "./BottomRow";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  const [ homeTeamOn, setHomeTeamOn ] = useState("0");
-  const [ awayTeamOn, setAwayTeamOn ] = useState("0");
-  const onClickHandlerHome = () => setHomeTeamOn(homeTeamOn + 7);
-  const onClickHandlerHome1 = () => setHomeTeamOn(homeTeamOn + 3);
-  const OnClickAway = () => setAwayTeamOn(awayTeamOn + 7);
-  const OnClickAway1 = () => setAwayTeamOn(awayTeamOn + 3);
+  var [ homeTeamOn, setHomeTeamOn ] = useState(0);
+  var [ awayTeamOn, setAwayTeamOn ] = useState(0);
+  // const onClickHandlerTouchdown = () => setTouchdown({homeTeamOn} || {awayTeamOn} + 7);
+  // const onClickHandlerFieldGoal = () => setFieldGoal({homeTeamOn} || {awayTeamOn} + 3);
+  // const OnClickAway = () => setAwayTeamOn(awayTeamOn + 7);
+  // const OnClickAway1 = () => setAwayTeamOn(awayTeamOn + 3);
 
   return (
     <div className="container">
@@ -23,10 +23,10 @@ function App() {
 
   <div className="home__score" >{homeTeamOn}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">15:00</div>
           <div className="away">
-  <h2 className="away__name">{awayTeamOn}</h2>
-            <div className="away__score">32</div>
+  <h2 className="away__name">Browns</h2>
+            <div className="away__score">{awayTeamOn}</div>
           </div>
         </div>
         <BottomRow />
@@ -34,12 +34,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button onClick={onClickHandlerHome} className="homeButtons__touchdown">Home Touchdown</button>
-          <button onclick={onClickHandlerHome1} className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button onClick={() => setHomeTeamOn(homeTeamOn += 7)} className="homeButtons__touchdown">Home Touchdown</button>
+          <button onClick={() => setHomeTeamOn(homeTeamOn += 3)} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button onClick={OnClickAway} className="awayButtons__touchdown">Away Touchdown</button>
-          <button onClick={OnClickAway1} className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button onClick={() => setAwayTeamOn(awayTeamOn += 7)} className="awayButtons__touchdown">Away Touchdown</button>
+          <button onClick={() => setAwayTeamOn(awayTeamOn += 3)} className="awayButtons__fieldGoal">Away Field Goal</button>
         </div> 
       </section>
     </div>
