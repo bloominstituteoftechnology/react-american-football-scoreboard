@@ -8,21 +8,6 @@ function App() {
   const [homescore, setHomescore] = useState(0);
   const [awayscore, setAwayscore] = useState(0);
 
-  // const [score, setScore] = useState(0);
-
- /* const [quarter, setQuarter] = useState(0);
-  const updateQtr = e => {
-    if(quarter < 4){
-      quarter = quarter + 1;
-    }else{
-      quarter = 0;
-    }
-  }
-*/
-
-// const fieldGoal(team){
-//   setScore = team.score + 3;
-// }
 
 function updateScore(team, points){
   if(team === "home"){
@@ -48,6 +33,8 @@ function updateScore(team, points){
 //    setAwayscore(awayscore + 3);
 //  }
 
+//change quarter
+// const [quarter, setQuarter] = useState(1);
  
 
   return (
@@ -85,7 +72,7 @@ function updateScore(team, points){
         <button className="awayButtons__fieldGoal" onClick={() => updateScore("away", 3)}>Away Field Goal</button>
         </div>
 
-        {/* <div ><button>Update Qtr</button></div> */}
+         {/* <div ><button onClick={() => setQuarter(quarter + 1)}>Update Qtr</button></div>  */}
    
       </section>
     </div>
