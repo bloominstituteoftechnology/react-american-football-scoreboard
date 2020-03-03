@@ -53,7 +53,7 @@ const [counter, setCounter] = React.useState(0);
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer"></div>
+          <div className="timer"> {minutes} : {seconds}</div>
           <div className="away">
           <h2 className="away__name">{awayTeam}</h2>
             <div className="away__score">{awayScore}</div>
