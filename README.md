@@ -16,15 +16,15 @@ In this project, you build an app that diplays a scoreboard for an american foot
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd american-football-scoreboard`
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [Y] Create a forked copy of this project.
+- [Y] Add your team lead as collaborator on Github.
+- [Y] Clone your OWN version of the repository in your terminal
+- [Y] CD into the project base directory `cd american-football-scoreboard`
+- [Y] Download project dependencies by running `npm install`
+- [Y] Start up the app using `npm start`
+- [Y] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [Y] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [Y] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -41,7 +41,7 @@ Follow these steps for completing your project.
 
 ### STEP 1 & 2 - Adding Team Scores to the Component's State
 
-- [ ] Import the `useState` hook
+- [Y] Import the `useState` hook
 - [ ] Set up the state values for the Lions team score using the state hook
 
 ```js
