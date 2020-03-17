@@ -68,8 +68,8 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-- [ ] Break out parts of this component into smaller components and compose multiple components together to make the UI
-- [ ] Write a "handler" function in the component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
+- [x] Break out parts of this component into smaller components and compose multiple components together to make the UI
+- [x] Write a "handler" function in the component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
 - [ ] Play around with the styling and make this project your own! Maybe make it a soccer (non-american football) scoreboard, or a rugby or baseball scoreboard
 - [ ] Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - [ ] Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)

@@ -24,4 +24,4 @@ const BottomRow = () => {
   );
 };
 
-export default BottomRow;
+export {BottomRow};
