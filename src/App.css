@@ -1,3 +1,10 @@
+body {
+  background-image: url(../src/img/patriots-vs-falcons.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :root {
   --black: #0d0d0d;
   --red: #ff2d2b;
