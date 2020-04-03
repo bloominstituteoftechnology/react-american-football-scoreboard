@@ -9,19 +9,19 @@ function App() {
   const [awayScore, setAwayScore] = useState(0);
 
   const incrementHomeScore = e => {
-    setHomeScore(homeScore + 6);
+    setHomeScore(homeScore + 7);
   }
 
   const incrementHomeFieldGoal = e => {
-    setHomeScore(homeScore + 1);
+    setHomeScore(homeScore + 3);
   }
 
   const incrementAwayScore = e => {
-    setAwayScore(awayScore + 6);
+    setAwayScore(awayScore + 7);
   }
 
   const incrementAwayFieldGoal = e => {
-    setAwayScore(awayScore + 1);
+    setAwayScore(awayScore + 3);
   }
 
 
