@@ -2,12 +2,10 @@ import React from "react";
 import { useState } from "react";
 import '../../../App.css';
 
-const AwayFieldGoal = () => {
-
-    const [awayScore, newAwayScore] = useState(0);
+const AwayFieldGoal = (props) => {
 
     return (
-        <button className="awayButtons__fieldGoal" onClick={() => newAwayScore(awayScore + 3)}>Away Field Goal</button>
+        <button className="awayButtons__fieldGoal" onClick={props.fieldGoal}>Away Field Goal</button>
     );
 };
 
