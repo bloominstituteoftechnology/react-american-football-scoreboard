@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
@@ -10,8 +10,29 @@ function App() {
   const [homeScore, setHomeScore] = useState(number);
   const [awayScore, setAwayScore] = useState(number);
 
+
+  const minutes = 15;
+  const seconds = '00';
+  const [minutesLeft, setMinutesLeft] = useState(minutes);
+  const [secondsLeft, setSecondsLeft] = useState(seconds);
+
+  // if (
+  //   // (seconds == 00 ? 59 : - 1)
+  //   // (seconds == 00 ? minutes -  1 : - 1)
+  //   (seconds == '00')
+  // ){
+  //   setMinutesLeft(minutesLeft - 1);
+  //   setSecondsLeft(secondsLeft + 59);
+  // }
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
+  // });
   
 
+  
   return (
     <div className="container">
       <section className="scoreboard">
@@ -23,7 +44,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{minutesLeft}:{secondsLeft}</div>
           <div className="away">
             <h2 className="away__name">Roughnecks</h2>
             <div className="away__score">{awayScore}</div>
@@ -34,11 +55,11 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 7)}>Home Touchdown</button>
+          <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 7)}>Away Touchdown</button>
+          <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 6)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
         </div>
       </section>
