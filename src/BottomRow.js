@@ -4,6 +4,10 @@ import "./App.css";
 const BottomRow = () => {
   const [quarter, setQuarter] = useState(1);
 
+  if(quarter >= 5){
+    setQuarter(quarter == 1)
+  }
+
   return (
     <div className="bottomRow">
       <div className="down">

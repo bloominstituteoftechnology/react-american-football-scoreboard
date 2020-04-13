@@ -16,6 +16,8 @@ function App() {
   const [minutesLeft, setMinutesLeft] = useState(minutes);
   const [secondsLeft, setSecondsLeft] = useState(seconds);
 
+  // setInterval(seconds, 59000)
+
   // if (
   //   // (seconds == 00 ? 59 : - 1)
   //   // (seconds == 00 ? minutes -  1 : - 1)
@@ -23,13 +25,7 @@ function App() {
   // ){
   //   setMinutesLeft(minutesLeft - 1);
   //   setSecondsLeft(secondsLeft + 59);
-  // }
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setTimeLeft(calculateTimeLeft());
-  //   }, 1000);
-  // });
+  // };
   
 
   
@@ -62,6 +58,11 @@ function App() {
           <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 6)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
         </div>
+        {/* <div>
+         <button onClick={startTimer}>start</button>
+         <button onClick={stopTimer}>stop</button>
+         <button onClick={resetTimer}>reset</button>
+       </div> */}
       </section>
     </div>
   );
