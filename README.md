@@ -78,7 +78,7 @@ After finishing your required elements, you can push your work further. These go
 
 ### Stretch Goal 2
 
-Start building a game of **Tic Tac Toe** in React. The positions of the 'Xs' and the 'Os' over time need to be maintained in a slice of state at the top-level component, so that the JSX may render the contents of the 3 x 3 grid correctly. Only empty squares may be selected by the human player, and the event handler that deals with these clicks will have to include quite a bit of logic:
+Start building a game of **Tic Tac Toe** in React. The positions of the 'Xs' and the 'Os' over time need to be maintained in a slice of state at the top-level component, so that the JSX may display the contents of the 3 x 3 grid correctly. Only empty squares may be selected by the human player, and the event handler that deals with these clicks will have to include quite a bit of logic:
 
   1. Does the latest move by the human player mean **the game is over**? (Game over, then!)
   1. Is the game **immediately winnable by the computer** by making a certain move? (Do it!)
