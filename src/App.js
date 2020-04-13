@@ -17,7 +17,7 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Defenders</h2>
+            <h2 className="home__name">BattleHawks</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
@@ -47,5 +47,4 @@ function App() {
 }
 
 export default App;
-
 
