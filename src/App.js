@@ -12,20 +12,18 @@ function App() {
 
   const [minutesLeft, setMinutesLeft] = useState(14);
   const [secondsLeft, setSecondsLeft] = useState(59);
-  // const [timeLeft, setTimeLeft] = useState(10);
-  
-  // setInterval(function(){setSecondsLeft(seconds - 1); }, 1000);
 
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       setSecondsLeft(secondsLeft - 1);
     }, 1000);
-  });
+    if (secondsLeft === 0){
+      setMinutesLeft(minutesLeft - 1);
+      setSecondsLeft(secondsLeft + 59);
+    };
+  }, [secondsLeft, minutesLeft]);
 
-  if (secondsLeft === 0){
-    setMinutesLeft(minutesLeft - 1);
-    setSecondsLeft(secondsLeft + 59);
-  };
+
 
   
   return (
