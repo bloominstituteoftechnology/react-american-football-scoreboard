@@ -70,8 +70,8 @@ After finishing your required elements, you can push your work further. These go
 
 ### Stretch Goal 1
 
-- [ ] Break out parts of this component into smaller components and compose multiple components together to make the UI
-- [ ] Write a "handler" function in the component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
+- [ ] Break out parts of App component into smaller components and compose multiple components together to make the UI
+- [ ] Write a "handler" function in App component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
 - [ ] Play around with the styling and make this project your own! Maybe make it a soccer (non-American football) scoreboard, or a rugby or baseball scoreboard
 - [ ] Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - [ ] Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)
