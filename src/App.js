@@ -3,7 +3,10 @@ import React, { useState } from "react";
 import BottomRow from "./BottomRow";
 import "./App.css";
 
-function App() {
+const App = () => {
+
+  let [awayScore, setawayScore] = useState(0);
+  let [homeScore, sethomeScore] = useState(0);
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
   return (
