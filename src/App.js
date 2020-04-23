@@ -6,8 +6,10 @@ import "./App.css";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  [scoreHome, setScoreHome] = useState(0); //home score
-  [scoreAway, setScoreAway] = useState(0);
+  let [scoreHome, setScoreHome] = useState(0); //home score
+  let [scoreAway, setScoreAway] = useState(0);
+
+  //console.log(scoreHome);
 
   return (
     <div className="container">
@@ -33,7 +35,7 @@ function App() {
           <button
             className="homeButtons__touchdown"
             onClick={() => {
-              setHomeScore(homeScore + 7);
+              setScoreHome((scoreHome += 7));
             }}
           >
             Home Touchdown
@@ -41,19 +43,34 @@ function App() {
           <button
             className="homeButtons__fieldGoal"
             onClick={() => {
-              setHomeScore(homeScore + 3);
+              setScoreHome((scoreHome += 3));
             }}
           >
             Home Field Goal
           </button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button
+            className="awayButtons__touchdown"
+            onClick={() => {
+              setScoreAway((scoreAway += 7));
+            }}
+          >
+            Away Touchdown
+          </button>
+          <button
+            className="awayButtons__fieldGoal"
+            onClick={() => {
+              setScoreAway((scoreAway += 3));
+            }}
+          >
+            Away Field Goal
+          </button>
         </div>
       </section>
     </div>
   );
 }
+//ReactDOM.render(<App />, document.getElementById("root"));
 
 export default App;
