@@ -17,8 +17,12 @@ function App() {
     else if(event.target.className === 'awayButtons__touchdown'){
       setAwayScore(awayScore + 7)
     }
-    else{
+    else if(event.target.className === 'awayButtons__fieldGoal'){
       setAwayScore(awayScore + 3)
+    }
+    else{
+      setHomeScore(homeScore = 0)
+      setAwayScore(awayScore = 0)
     }
   }
   return (
@@ -46,6 +50,7 @@ function App() {
           <button onClick={play}className="homeButtons__touchdown">Home Touchdown</button>
           <button onClick={play}className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
+          <button onClick={play} className="reset-score">Reset Score</button>
         <div className="awayButtons">
           <button onClick={play}className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick={play}className="awayButtons__fieldGoal">Away Field Goal</button>
