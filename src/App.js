@@ -63,7 +63,7 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}> Add Point</button>
+          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 1)}> Add Point</button>
           <button className="homeButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Score</button>
         </div>
         <div className="awayButtons">
