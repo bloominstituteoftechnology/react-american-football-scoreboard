@@ -1,3 +1,11 @@
+/* * {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	Max-width: 100%;
+	
+} */
+
 body {
   background-image: url(https://res.cloudinary.com/xfl-production/image/upload/b_transparent,c_pad,dpr_2.0,f_webp,g_center,q_auto,w_480/v1/xfl-prod/XFL_Logo_RGB);
   background-size: cover;
@@ -79,6 +87,7 @@ body {
   background-color: var(--black);
   border: 2px solid white;
   border-radius: 6px;
+  margin: 0 1%;
 }
 
 .bottomRow {
@@ -124,7 +133,12 @@ body {
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal,
+.homeButtons__resetScore,
+.awayButtons__resetScore,
+.gameQTR,
+.toggleStart,
+.reset {
   margin: 1rem;
   border-radius: 4px;
 }

@@ -1,30 +1,48 @@
-//TODO: STEP 1 - Import the useState hook.
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const number = 0;
   const [homeScore, setHomeScore] = useState(number);
   const [awayScore, setAwayScore] = useState(number);
+
+  const [quarter, setQuarter] = useState(1);
+
+  const [isActive, setIsActive] = useState(false);
 
   const [minutesLeft, setMinutesLeft] = useState(14);
   const [secondsLeft, setSecondsLeft] = useState(59);
 
   useEffect(() => {
-    setTimeout(() => {
-      setSecondsLeft(secondsLeft - 1);
-    }, 1000);
-    if (secondsLeft === 0){
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSecondsLeft(secondsLeft => secondsLeft - 1);
+      }, 1000);
+    } else if (!isActive && secondsLeft !== 0) {
+      clearInterval(interval);
+    } if (secondsLeft === 0){
       setMinutesLeft(minutesLeft - 1);
       setSecondsLeft(secondsLeft + 59);
     };
-  }, [secondsLeft, minutesLeft]);
+    return () => clearInterval(interval);
+  }, [isActive, secondsLeft, minutesLeft]);
 
+  function toggle() {
+    setIsActive(!isActive);
+  }
 
+  function reset() {
+    setMinutesLeft(14)
+    setSecondsLeft(59);
+    setIsActive(false);
+  }
 
+  if(quarter >= 5){
+    setQuarter(quarter === 1)
+  }
   
   return (
     <div className="container">
@@ -32,34 +50,34 @@ function App() {
         <div className="topRow">
           <div className="home">
             <h2 className="home__name">BattleHawks</h2>
-
-            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
-
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">{minutesLeft}:{secondsLeft}</div>
+          <div className="timer">{minutesLeft}:{ secondsLeft < 10 ? `0${ secondsLeft }` : secondsLeft }</div>
           <div className="away">
             <h2 className="away__name">Roughnecks</h2>
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarter={quarter} setQuarter={setQuarter} />
       </section>
       <section className="buttons">
         <div className="homeButtons">
-          {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
           <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Home Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}>Home Field Goal</button>
+          <button className="homeButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Home Score</button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 6)}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
+          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 1)}>Away Add 1 Point</button>
+          <button className="awayButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Away Score</button>
         </div>
-        {/* <div>
-         <button onClick={startTimer}>start</button>
-         <button onClick={stopTimer}>stop</button>
-         <button onClick={resetTimer}>reset</button>
-       </div> */}
+        <div className='gameQuarter'>
+          <button className='gameQTR' onClick={() => setQuarter(quarter + 1)}>Quarter</button>
+          <button className={`toggleStart ${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
+          {isActive ? 'Pause Time' : 'Start Time'}
+          </button> 
+         <button className={'reset'} onClick={reset}>Reset Time</button>
+       </div>
       </section>
     </div>
   );
