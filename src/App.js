@@ -63,13 +63,13 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}>Home Field Goal</button>
-          <button className="homeButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Home Score</button>
+          <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 3)}> Add Point</button>
+          <button className="homeButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Score</button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 6)}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 1)}>Away Add 1 Point</button>
-          <button className="awayButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Away Score</button>
+          <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 1)}>Add Point</button>
+          <button className="awayButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Score</button>
         </div>
         <div className='gameQuarter'>
           <button className='gameQTR' onClick={() => setQuarter(quarter + 1)}>Quarter</button>

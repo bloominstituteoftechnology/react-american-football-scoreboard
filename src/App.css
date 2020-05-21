@@ -1,17 +1,16 @@
-/* * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	Max-width: 100%;
-	
-} */
-
-body {
-  background-image: url(https://res.cloudinary.com/xfl-production/image/upload/b_transparent,c_pad,dpr_2.0,f_webp,g_center,q_auto,w_480/v1/xfl-prod/XFL_Logo_RGB);
+body { 
+  background: url(https://res.cloudinary.com/xfl-production/image/upload/b_transparent,c_pad,dpr_2.0,f_webp,g_center,q_auto,w_480/v1/xfl-prod/XFL_Logo_RGB) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-color: black;
-
 }
+
+
+/* body {
+  background-color: rgba(0, 0, 0, 0.7);
+} */
 
 :root {
   --black: #0d0d0d;
@@ -21,13 +20,13 @@ body {
 .scoreboard {
   width: 58%;
   margin: 10rem auto;
-  background-color: #080E33;
+  background-color: rgba(8, 14, 51, 0.9);
   color: white;
   border-radius: 0.5rem;
   margin-top: 10rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
-  opacity: .9;
+
 }
 
 .topRow {
@@ -128,6 +127,13 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+.homeButtons, .awayButtons, .gameQuarter {
+  border: 4px solid #aaaaaa;
+  background-color: rgba(8, 14, 51, 0.9);
+  margin: 0 1%;
+  border-radius: 5px;
 }
 
 .homeButtons__touchdown,
