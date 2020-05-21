@@ -52,6 +52,16 @@ body {
   background-color: blue;
 }
 
+.home h1, .away h1 {
+  background-color: rgb(8, 14, 51);
+  border: 1px white solid;
+  border-radius: 3px;
+  margin-top: 1%;
+  padding: 0 2%;
+  color: white;
+}
+
+
 .away {
   background-color: #aaaaaa;
 }
@@ -129,12 +139,17 @@ body {
   justify-content: space-around;
 }
 
-.homeButtons, .awayButtons, .gameQuarter {
+.homeButtons, .awayButtons, .gameQuarter, .time {
   border: 4px solid #aaaaaa;
   background-color: rgba(8, 14, 51, 0.9);
   margin: 0 1%;
   border-radius: 5px;
 }
+
+.homeButtons h1, .awayButtons h1, .time h1, .gameQuarter h1 {
+  color: #aaaaaa;
+}
+
 
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
