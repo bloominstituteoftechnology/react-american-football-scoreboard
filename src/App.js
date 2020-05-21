@@ -81,7 +81,7 @@ function App() {
           <h1>HOME TEAM</h1>
           <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 1)}> Add Point</button>
-          <button className="homeButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Score</button>
+          <button className="homeButtons__resetScore" onClick={() => setHomeScore(setHomeScore === number)}>Reset Score</button>
         </div>
         <div className="awayButtons">
           <h1>AWAY TEAM</h1>
