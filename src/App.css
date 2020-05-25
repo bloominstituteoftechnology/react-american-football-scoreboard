@@ -1,4 +1,4 @@
-body { 
+html {
   background: url(https://res.cloudinary.com/xfl-production/image/upload/b_transparent,c_pad,dpr_2.0,f_webp,g_center,q_auto,w_480/v1/xfl-prod/XFL_Logo_RGB) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,6 +6,10 @@ body {
   background-size: cover;
   background-color: black;
 }
+
+/* body { 
+  background-color: white;
+} */
 
 
 /* body {
@@ -139,15 +143,21 @@ body {
   justify-content: space-around;
 }
 
-.homeButtons, .awayButtons, .gameQuarter, .time {
+.homeButtons, .awayButtons, .gameQuarter, .yardsOn, .time {
   border: 4px solid #aaaaaa;
   background-color: rgba(8, 14, 51, 0.9);
   margin: 0 1%;
   border-radius: 5px;
 }
 
-.homeButtons h1, .awayButtons h1, .time h1, .gameQuarter h1 {
+.homeButtons h1, 
+.awayButtons h1, 
+.time h1, 
+.gameQuarter h1,
+.yardsOn h1 {
   color: #aaaaaa;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -159,7 +169,13 @@ body {
 .awayButtons__resetScore,
 .gameQTR,
 .toggleStart,
+.yardsAdd,
+.yardsSub,
 .reset {
   margin: 1rem;
   border-radius: 4px;
+}
+
+.yardsplus, .yardsminus {
+  display: flex;
 }

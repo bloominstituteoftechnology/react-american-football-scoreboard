@@ -78,13 +78,13 @@ function App() {
       </section>
       <section className="buttons">
         <div className="homeButtons">
-          <h1>HOME TEAM</h1>
+          <h1>HOME</h1>
           <button className="homeButtons__touchdown" onClick={() => setHomeScore(homeScore + 6)}>Touchdown</button>
           <button className="homeButtons__fieldGoal" onClick={() => setHomeScore(homeScore + 1)}> Add Point</button>
           <button className="homeButtons__resetScore" onClick={() => setHomeScore(setHomeScore === number)}>Reset Score</button>
         </div>
         <div className="awayButtons">
-          <h1>AWAY TEAM</h1>
+          <h1>AWAY</h1>
           <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 6)}>Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 1)}>Add Point</button>
           <button className="awayButtons__resetScore" onClick={() => setAwayScore(setAwayScore === number)}>Reset Score</button>
@@ -100,16 +100,21 @@ function App() {
           <h1>TO GO</h1>
           <button className='gameQTR' onClick={() => setToGO(toGo + 1)}>+1</button>
           <button className='gameQTR' onClick={() => setToGO(toGo - 1)}>-1</button>
-          <button className='gameQTR' onClick={resetToGo}>Reset</button>
+          <button className='reset' onClick={resetToGo}>Reset</button>
           
         </div>
-        <div className='gameQuarter'>
+        <div className='yardsOn'>
           <h1>BALL ON</h1>
-          <button className='gameQTR' onClick={() => setBallOn(ballOn + 1)}>+ 1</button>
-          <button className='gameQTR' onClick={() => setBallOn(ballOn + 5)}>+ 5</button>
-          <button className='gameQTR' onClick={() => setBallOn(ballOn - 1)}>- 1</button>
-          <button className='gameQTR' onClick={() => setBallOn(ballOn - 5)}>- 5</button>
-          <button className='gameQTR' onClick={resetBallOn}>Reset</button>
+          <div className='yardsplus'>
+            <button className='yardsAdd' onClick={() => setBallOn(ballOn + 1)}>+1</button>
+            <button className='yardsAdd' onClick={() => setBallOn(ballOn + 5)}>+5</button>
+          </div>
+          <div className='yardsminus'>
+            <button className='yardsSub' onClick={() => setBallOn(ballOn - 1)}>- 1</button>
+            <button className='yardsSub' onClick={() => setBallOn(ballOn - 5)}>- 5</button>
+          </div>
+
+          <button className='reset' onClick={resetBallOn}>Reset</button>
           
         </div>
         <div className='gameQuarter'>
