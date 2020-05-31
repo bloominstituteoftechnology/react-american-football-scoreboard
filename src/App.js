@@ -20,7 +20,7 @@ function App() {
     setHomeSc(homeSco + 3)// home set to current score + 3 for Fild Goal
   }
   
-  let fildFldGol = el => {
+  let awayFldGol = el => {
     setAwaySc(awaySco + 3)// away set to current score + 3 for Fild Goal
   }
 
@@ -48,12 +48,15 @@ function App() {
         <div className="homeButtons">
 
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+
+          {/* Listenining to click to set score for home. */}
+          <button className="homeButtons__touchdown" onClick={homeTchDwn}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal"onClick={homeFldGol}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          {/* Listenining to click to set score for away. */}
+          <button className="awayButtons__touchdown" onClick={AwayTchDwn}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick={awayFldGol}>Away Field Goal</button>
         </div>
       </section>
     </div>
