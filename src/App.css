@@ -7,6 +7,7 @@
   width: 58%;
   margin: 2rem auto;
   background-color: #0b5402;
+  /* background-color:#C78228; */
   color: white;
   border-radius: 0.5rem;
   padding: 5rem;
@@ -48,11 +49,11 @@
 }
 
 .home {
-  background-color: #656565;
+  background-color: #FF3300;
 }
 
 .away {
-  background-color: #af750a;
+  background-color: #99002B;
 
 }
 

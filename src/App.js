@@ -1,10 +1,10 @@
-//TODO: STEP 1 - Import the useState hook.
+//STEP 1 - Import the useState hook.
 import React, { useState } from "react";
 import BottomRow from "./BottomRow";
 import "./App.css";
 
 function App() {
-  //TODO: STEP 2 - Establish your application's state with some useState hooks.  You'll need one for the home score and another for the away score.
+  //STEP 2 - Establish your application's state
   const [homeScore, setHomeScore] = useState(0);
 
   const [awayScore, setAwayScore] = useState(0);
@@ -32,7 +32,7 @@ function App() {
           <div className="home">
             <h2 className="home__name">Texas Longhorns</h2>
 
-            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+            {/*STEP 3 - change the hardcoded values in these divs */}
             <div className="home__score">{homeScore}</div>
           </div>
           <div className="timer">00:07</div>
@@ -45,7 +45,7 @@ function App() {
       </section>
       <section className="buttons">
         <div className="homeButtons">
-          {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
+          {/* STEP 4 - attach our state setter functions to click listeners. */}
           <button className="homeButtons__touchdown" onClick={homeTouchDown}>
             Home Touchdown
           </button>
