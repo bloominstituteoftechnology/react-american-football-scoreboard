@@ -7,8 +7,24 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and
   // another for the away score.
 
-  var homeScore = useState(32);
-  var awayScore = useState(30);
+  const [homeScore, setTeamScoreHome] = useState(0)
+  const [awayScore, setTeamScoreAway] = useState(0)
+
+  const homeTouchdown = event => {
+    setTeamScoreHome(homeScore + 7)
+  }
+
+  const homeFieldGoal = event => {
+    setTeamScoreHome(homeScore + 3)
+  }
+
+  const awayTouchdown = event => {
+    setTeamScoreAway(awayScore + 7)
+  }
+
+  const awayFieldGoal = event => {
+    setTeamScoreAway(awayScore + 3)
+  }
 
   return (
     <div className="container">
@@ -36,42 +52,17 @@ function App() {
           
           
           }
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick={homeTouchdown}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" onClick={homeFieldGoal}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick={awayTouchdown}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick={awayFieldGoal}>Away Field Goal</button>
         </div>
       </section>
     </div>
   );
 
 }
-if(window.load) {
-const homeTouchdown = document.querySelector(".homeButtons__touchdown")
-const homeFieldgoal = document.querySelector(".homeButtons__fieldGoal")
-const awayTouchdown = document.querySelector(".awayButtons__touchdown")
-const awayFieldgoal = document.querySelector(".awayButtons__fieldGoal")
 
-homeTouchdown.addEventListener("click", function() {
-  var [homeScore, addTouchdown] = useState(32)
-  addTouchdown(homeScore + 3)
-})
-
-homeFieldgoal.addEventListenser("click", function() {
-  var [homeScore, addFieldgoal] = useState(32)
-  addFieldgoal(homeScore + 7)
-})
-
-awayTouchdown.addEventListener("click", function() {
-  var [awayScore, addAwayTouchdown] = useState(32)
-  addAwayTouchdown(awayScore + 3)
-})
-
-awayFieldgoal.addEventListener("click", function() {
-  var [awayScore, addAwayFieldgoal] = useState(32)
-  addAwayFieldgoal(awayScore + 3)
-})
-}
 export default App;
