@@ -87,3 +87,4 @@ Start building a game of **Tic Tac Toe** in React. The positions of the 'Xs' and
 The move by the computer should probably be random if the previous checks turn out negative, but you'll be surprised at how smart the "game engine" will feel.
 
 Have fun!
+
