@@ -2,9 +2,30 @@
 import React from "react";
 import BottomRow from "./BottomRow";
 import "./App.css";
+import { useState } from 'react';
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
+const [homeScore, mainHome] = useState(0);
+const [awayScore, mainAway] = useState(0);
+const homeTouchDown = event => {
+  mainHome(homeScore + 6)
+}
+const homeFieldGoal = event => {
+  mainHome(homeScore + 3)
+}
+const homeExtra = event =>{
+  mainHome(homeScore + 1)
+}
+const awayTouchdown = event => {
+  mainAway(awayScore + 6)
+}
+const awayFieldGoal = event => {
+  mainAway(awayScore + 3)
+}
+const awayExtra = event =>{
+  mainAway(awayScore + 1)
+
 
   return (
     <div className="container">
