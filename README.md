@@ -2,7 +2,7 @@
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored React components and component state. During the module, you studied what React is, what React components are and how to build them, what state is and how to make a component stateful, and how to change a components state with a click handler. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
-## Instructions
+## Introduction
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
 
@@ -14,7 +14,9 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 In this project, you build an app that displays a scoreboard for an American football game. There will be two buttons for each team - one will increment that team's score by three points (for a "field goal") and the other will increment that team's score by seven points (for a "touchdown" and "extra point"). The css is already done for you. You should focus your efforts on the functionality of the app.
 
-## Project Set Up
+## Instructions
+
+### Task 1: Project Set Up
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
@@ -26,20 +28,13 @@ In this project, you build an app that displays a scoreboard for an American foo
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
-Follow these steps for completing your project.
-
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repository). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into `main` branch.
-- [ ] Do your magic!
-
-## Minimum Viable Product
+### Task 2a: Minimum Viable Product
 
 1. Hold each team's current score in a state value
 2. Render each team's current score that is in state to the DOM.
 3. Be able to click the different buttons to increment the appropriate team's score by the correct amount
 
-### STEP 1 & 2 - Adding Team Scores to the Component's State
+#### Adding Team Scores to the Component's State
 
 - [ ] Import the `useState` hook
 - [ ] Set up the state values for the Lions team score using the state hook
@@ -50,13 +45,13 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 - [ ] Set up the state value for the Tigers team score using a second state hook call
 
-### STEP 3 - Render the Scores to the DOM
+#### Render the Scores to the DOM
 
 - [ ] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
 - [ ] Render the state values from what we just set up in steps 1 and 2
 - [ ] Play around with different initial values to test if they are rendering on the DOM correctly
 
-### STEP 4 - Add Click Functionality to Increment the Scores
+#### Add Click Functionality to Increment the Scores
 
 - [ ] Add the `onClick` handler to each function
 - [ ] Determine how much you will need to increment the score for each button
@@ -64,11 +59,17 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
   - [ ] A field goal is worth 3 points
 - [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
-## Stretch Problems
+### Task 2b: Exit Ticket
+
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/R4yNg7CrXix4qryxQ/wrFc7AbwWfnACu).
+
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
+### Task 3: Stretch Problems
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-### Stretch Goal 1
+#### Stretch Goal 1
 
 - [ ] Break out parts of App component into smaller components and compose multiple components together to make the UI
 - [ ] Write a "handler" function in App component that takes in a team name and an amount. This function will then be passed to each button's click handler. It will increment the correct team's score by the passed in amount
@@ -76,7 +77,7 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Add a button that changes which quarter the game is in, and then render the state quarter value on the scoreboard
 - [ ] Make the entire board fully functional with buttons and state! (If you want to make a timer, you'll have to look into useEffect)
 
-### Stretch Goal 2
+#### Stretch Goal 2
 
 Start building a game of **Tic Tac Toe** in React. The positions of the 'Xs' and the 'Os' over time need to be maintained in a slice of state at the top-level component, so that the JSX may display the contents of the 3 x 3 grid correctly. Only empty squares may be selected by the human player, and the event handler that deals with these clicks will have to include quite a bit of logic:
 
@@ -87,3 +88,8 @@ Start building a game of **Tic Tac Toe** in React. The positions of the 'Xs' and
 The move by the computer should probably be random if the previous checks turn out negative, but you'll be surprised at how smart the "game engine" will feel.
 
 Have fun!
+
+## Submission Format
+
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
