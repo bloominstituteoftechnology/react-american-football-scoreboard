@@ -24,7 +24,7 @@ const [quarter, setQuarter] = useState(1)
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarter = {quarter}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -36,7 +36,7 @@ const [quarter, setQuarter] = useState(1)
         <div className="awayButtons">
           <button onClick ={(evt) => setAwayScore(awayScore + 6)} className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick ={(evt) => setAwayScore(awayScore + 3)} className="awayButtons__fieldGoal">Away Field Goal</button>
-          {/* <button onClick ={(evt) => setQuarter(quarter + 1)} className="quarter">Quarter</button> */}
+          <button onClick ={(evt) => setQuarter(quarter + 1)} className="quarter">Quarter</button>
         </div>
       </section>
     </div>
