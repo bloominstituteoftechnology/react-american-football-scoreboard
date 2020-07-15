@@ -18,15 +18,15 @@ In this project, you build an app that displays a scoreboard for an American foo
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd american-football-scoreboard`
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add your team lead as collaborator on Github.
+- [x] Clone your OWN version of the repository in your terminal
+- [x] CD into the project base directory `cd american-football-scoreboard`
+- [x] Download project dependencies by running `npm install`
+- [x] Start up the app using `npm start`
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2a: Minimum Viable Product
 
@@ -36,7 +36,7 @@ In this project, you build an app that displays a scoreboard for an American foo
 
 #### Adding Team Scores to the Component's State
 
-- [ ] Import the `useState` hook
+- [x] Import the `useState` hook
 - [ ] Set up the state values for the Lions team score using the state hook
 
 ```js
@@ -47,21 +47,21 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 #### Render the Scores to the DOM
 
-- [ ] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
-- [ ] Render the state values from what we just set up in steps 1 and 2
-- [ ] Play around with different initial values to test if they are rendering on the DOM correctly
+- [x] The scores in the JSX are currently hardcoded to 32 points each. Remove the hardcoded values
+- [x] Render the state values from what we just set up in steps 1 and 2
+- [x] Play around with different initial values to test if they are rendering on the DOM correctly
 
 #### Add Click Functionality to Increment the Scores
 
-- [ ] Add the `onClick` handler to each function
+- [x] Add the `onClick` handler to each function
 - [ ] Determine how much you will need to increment the score for each button
-  - [ ] A touchdown is worth 7 points (assume the following extra point is made)
-  - [ ] A field goal is worth 3 points
-- [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
+  - [x] A touchdown is worth 7 points (assume the following extra point is made)
+  - [x] A field goal is worth 3 points
+- [x] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
 
 ### Task 2b: Exit Ticket
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/R4yNg7CrXix4qryxQ/wrFc7AbwWfnACu).
+- [x] Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/R4yNg7CrXix4qryxQ/wrFc7AbwWfnACu).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
@@ -91,5 +91,5 @@ Have fun!
 
 ## Submission Format
 
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
+* [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+* [x] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
