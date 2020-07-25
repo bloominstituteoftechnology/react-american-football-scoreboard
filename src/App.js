@@ -10,7 +10,7 @@ const [awayTeam, setAwayScore] = useState(0);
 const [secondsTens,setSecondsTens] = useState(9);
 const [secondsOnes,setSecondsOnes] = useState(5);
 const [minutes,setMinutes] = useState(59);
-//second tens
+//clock go tick
 
 useEffect(() => {
 	const interval = secondsTens > -1 && setInterval(() => {
@@ -19,7 +19,7 @@ useEffect(() => {
 		if(secondsTens === -1){
 			setSecondsTens(9);
 			setSecondsOnes(secondsOnes - 1);
-			if(secondsOnes === -1){
+			if(secondsOnes === 0){
 			setSecondsOnes(5);
 			setMinutes(minutes -1);
 			if(minutes === 0){
@@ -30,37 +30,6 @@ useEffect(() => {
 		return () => clearInterval(interval);
 	}, [secondsTens]);
 
-//second ones 
-/*
-useEffect(() => {
-	const interval = secondsOnes > -1 && setInterval(() => {
-		setSecondsOnes(setSecondsOnes => secondsOnes -1)
-		}, 10000);
-		if(secondsOnes === -1){
-			setSecondsOnes(5);
-			setSecondsTens(secondsTens - 1)
-		if(secondsTens === -1){
-			setMinutes(minutes - 1)
-				if(minutes === 0 ){
-					setMinutes(59);
-				}
-			}
-		}
-		return () => clearInterval(interval);
-	}, [secondsOnes]);
-	*/
-//minutes
-/*
-useEffect(() => {
-	const interval = minutes > -1 && setInterval(() => {
-		setMinutes(setMinutes => minutes -1)
-		}, 60000);
-		if(minutes === -1){
-			setMinutes(59);
-		}
-		return () => clearInterval(interval);
-	}, [minutes]);
-	*/
   return (
     <div className="container">
       <section className="scoreboard">
@@ -88,7 +57,7 @@ useEffect(() => {
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick = {() => setAwayScore(awayTeam + 7)}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick = {() => setAwayScore(awayTeam + 6)}>Away Field Goal</button>
+          <button className="awayButtons__fieldGoal" onClick = {() => setAwayScore(awayTeam + 3)}>Away Field Goal</button>
         </div>
       </section>
     </div>
