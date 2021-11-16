@@ -63,7 +63,7 @@ const [value, setValue] = useState(); // Give these better names, and decide whe
 
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/R4yNg7CrXix4qryxQ/wrFc7AbwWfnACu).
 
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a BloomTech student whatsoever. This is BloomTech testing itself! Please answer honestly and to the best of your ability without using external references.
 
 ### Task 3: Stretch Problems
 
@@ -92,4 +92,4 @@ Have fun!
 ## Submission Format
 
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
+* [ ] Fill out your module retrospective form [here](https://forms.bloomtech.com/module-retrospective) with a link to your PR
